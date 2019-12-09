@@ -1,3 +1,7 @@
+#pyConTextNLP Negation Detection
+
+This repository contains code that performs negation detection on transcripts in a medical context. It will be integrated as part of https://github.com/UVA-DSA/EMS-Pipeline and contains a model from https://allenai.github.io/scispacy/.
+
 # Installation instructions
 
 Tested to be working on Python 3.7.4.
