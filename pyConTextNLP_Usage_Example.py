@@ -1,9 +1,10 @@
 import pyConTextNLP.pyConText as pyConText
 import pyConTextNLP.itemData as itemData
 import networkx as nx
+import os
 
-PYCONTEXTNLP_MODIFIERS = r'/C:/Users/mchlt/Downloads/School/Research/PyContextNLP/pyConTextNLP-Negation-Detection/data/pycontextnlp_modifiers.yml'
-PYCONTEXTNLP_TARGETS = r'/C:/Users/mchlt/Downloads/School/Research/PyContextNLP/pyConTextNLP-Negation-Detection/data/pycontextnlp_targets.yml'
+PYCONTEXTNLP_MODIFIERS = r'/' + os.getcwd() + '/data/pycontextnlp_modifiers.yml'
+PYCONTEXTNLP_TARGETS = r'/' + os.getcwd() + '/data/pycontextnlp_targets.yml'
 
 test_str = "Patient denies chest pain, diaphoresis, sob, rash, rales, sleepiness, and pregnancy."
 

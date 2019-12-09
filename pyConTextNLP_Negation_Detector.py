@@ -4,6 +4,7 @@ import networkx as nx
 import pandas as pd
 import spacy
 import urllib
+import os
 
 
 def negations_pycontextnlp(clinical_text_df):
@@ -81,8 +82,8 @@ def negations_pycontextnlp(clinical_text_df):
 
 
 def negations_pycontextnlp_individual_transcript(nlp, clinical_text):
-    PYCONTEXTNLP_MODIFIERS = r'/C:/Users/mchlt/Downloads/School/Research/PyContextNLP/pyConTextNLP-Negation-Detection/data/pycontextnlp_modifiers.yml'
-    PYCONTEXTNLP_TARGETS = r'/C:/Users/mchlt/Downloads/School/Research/PyContextNLP/pyConTextNLP-Negation-Detection/data/pycontextnlp_targets.yml'
+    PYCONTEXTNLP_MODIFIERS = r'/' + os.getcwd() + '/data/pycontextnlp_modifiers.yml'
+    PYCONTEXTNLP_TARGETS = r'/' + os.getcwd() + '/data/pycontextnlp_targets.yml'
 
     modifiers = itemData.get_items(PYCONTEXTNLP_MODIFIERS)
     targets = itemData.get_items(PYCONTEXTNLP_TARGETS)
