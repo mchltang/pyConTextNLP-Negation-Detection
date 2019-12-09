@@ -1,0 +1,484 @@
+Comments: ''
+Direction: ''
+Lex: absent femoral pulses
+Regex: ''
+Type: ABSENT_FEMORAL_PULSES
+---
+Comments: ''
+Direction: ''
+Lex: agitation
+Regex: ''
+Type: AGITATION
+---
+Comments: ''
+Direction: ''
+Lex: anxiety
+Regex: (anxiety level|anxiety|scared|panic attacks|hyperventilating|tx|anxious)
+Type: ANXIETY
+---
+Comments: ''
+Direction: ''
+Lex: bizarre behavior
+Regex: (acting erratic|behaving strangely)
+Type: BIZARRE_BEHAVIOR
+---
+Comments: ''
+Direction: ''
+Lex: blindness
+Regex: ''
+Type: BLINDNESS
+---
+Comments: ''
+Direction: ''
+Lex: blood pressure
+Regex: (htn|antihypertensive|bp|hypertension|blood pressure)
+Type: BLOOD_PRESSURE
+---
+Comments: ''
+Direction: ''
+Lex: chest pain
+Regex: (sharp chest pain|sharp pains chest|burning pain of chest|chest pain|cx pain|cp|sharp
+  pain breast)
+Type: CHEST_PAIN
+---
+Comments: ''
+Direction: ''
+Lex: clammy skin
+Regex: (cool|cool pale|clammy)
+Type: CLAMMY_SKIN
+---
+Comments: ''
+Direction: ''
+Lex: combative
+Regex: (combative)
+Type: COMBATIVE
+---
+Comments: ''
+Direction: ''
+Lex: confusion
+Regex: (confused|disoriented)
+Type: CONFUSION
+---
+Comments: ''
+Direction: ''
+Lex: constipation
+Regex: ''
+Type: CONSTIPATION
+---
+Comments: ''
+Direction: ''
+Lex: cool skin
+Regex: (cool skin|diphoretic)
+Type: COOL_SKIN
+---
+Comments: ''
+Direction: ''
+Lex: cough
+Regex: (coughing|barky cough|dbc|cough)
+Type: COUGH
+---
+Comments: ''
+Direction: ''
+Lex: decreased mental status
+Regex: (ams|slumped over|cx|AOX4|caox2|found altered|aox1|AY&Ox4|Aox2|not alert|alert|lethargic|caox3|ANOx4|avpu|caox1|aox4|CAox4|acting
+  appropriately|aox2|ayox4|caox4|A&Ox4|responsive to verbal|responsive to pain|AMS|A&O
+  x 1|aox3|alert to verbal|anox4|acting out|post ictal|slow responsiveness|appears
+  lethargic|semiconscious|gcs|unresponsive|A&Ox2 basline|GCS)
+Type: DECREASED_MENTAL_STATUS
+---
+Comments: ''
+Direction: ''
+Lex: decreased visual acuity
+Regex: ''
+Type: DECREASED_VISUAL_ACUITY
+---
+Comments: ''
+Direction: ''
+Lex: delusional thoughts
+Regex: ''
+Type: DELUSIONAL_THOUGHTS
+---
+Comments: ''
+Direction: ''
+Lex: malaise
+Regex: (feel crummy|malaise|ill|distress|feeling weak|near syncope|discomfort|general
+  malaise)
+Type: MALAISE
+---
+Comments: ''
+Direction: ''
+Lex: diaphoresis
+Regex: (skin is warm|diaphoresis|skin diaphoretic|diaphoretic)
+Type: DIAPHORESIS
+---
+Comments: ''
+Direction: ''
+Lex: diarrhea
+Regex: (nvd|diarrhea|n/v/d)
+Type: DIARRHEA
+---
+Comments: ''
+Direction: ''
+Lex: distension
+Regex: (distension|distended|distention|abdomen distended)
+Type: DISTENSION
+---
+Comments: ''
+Direction: ''
+Lex: dizziness
+Regex: (dizzyness|dizziness|lightheadedness|vertigo|dizzy)
+Type: DIZZINESS
+---
+Comments: ''
+Direction: ''
+Lex: dysrhythmia
+Regex: (vtach|atrial ectopy|arrythmia)
+Type: DYSRHYTHMIA
+---
+Comments: ''
+Direction: ''
+Lex: dysuria
+Regex: (difficulty urinating|dysuria)
+Type: DYSURIA
+---
+Comments: ''
+Direction: ''
+Lex: fever
+Regex: (fevers|feverish|temperature 99.7F|afebrile|fever)
+Type: FEVER
+---
+Comments: ''
+Direction: ''
+Lex: hallucinations
+Regex: (hallucinations|auditory hallucinations)
+Type: HALLUCINATIONS
+---
+Comments: ''
+Direction: ''
+Lex: headache
+Regex: (head ache|headaches|headache|head pain|ha)
+Type: HEADACHE
+---
+Comments: ''
+Direction: ''
+Lex: homicidal thoughts
+Regex: (murder|homicidal|homicide|homicidal thoughts|homicidal ideations)
+Type: HOMICIDAL_THOUGHTS
+---
+Comments: ''
+Direction: ''
+Lex: hypertension
+Regex: (BP very elevated|hypertension|htn)
+Type: HYPERTENSION
+---
+Comments: ''
+Direction: ''
+Lex: hyperthermia
+Regex: (fevers)
+Type: HYPERTHERMIA
+---
+Comments: ''
+Direction: ''
+Lex: hypotension
+Regex: (blood pressure)
+Type: HYPOTENSION
+---
+Comments: ''
+Direction: ''
+Lex: hypothermia
+Regex: ''
+Type: HYPOTHERMIA
+---
+Comments: ''
+Direction: ''
+Lex: incontinence
+Regex: (incontinent|incontinent of urine|incontinence)
+Type: INCONTINENCE
+---
+Comments: ''
+Direction: ''
+Lex: lightheadedness
+Regex: (dizzyness|lightheaded|dizziness|lightheadedness|light headedness|dizzy|light)
+Type: LIGHTHEADEDNESS
+---
+Comments: ''
+Direction: ''
+Lex: loss of consciousness
+Regex: (loc|syncope|passed out|LOC|fainting|vaso vagle|loss of consciousness|fainted|loa|unconscious)
+Type: LOSS_OF_CONSCIOUSNESS
+---
+Comments: ''
+Direction: ''
+Lex: mental status changes
+Regex: (lethargic)
+Type: MENTAL_STATUS_CHANGES
+---
+Comments: ''
+Direction: ''
+Lex: myalgias
+Regex: ''
+Type: MYALGIAS
+---
+Comments: ''
+Direction: ''
+Lex: nausea
+Regex: (nauseated|nausea/vomiting|nauseous|nausea|nausea with vomiting|nvd|n/v/d)
+Type: NAUSEA
+---
+Comments: ''
+Direction: ''
+Lex: pain
+Regex: (has pain|painful|back hurts|tx|in obvious pain|pain)
+Type: PAIN
+---
+Comments: Should "radiation" alone be a form of "pain radiation" as a concept?
+Direction: ''
+Lex: pain radiation
+Regex: (nonradiating|radiation|pain radiation|radiating|radiation pain)
+Type: PAIN_RADIATION
+---
+Comments: ''
+Direction: ''
+Lex: pain region
+Regex: (lower back pain|pain region|upper abdomen|neck pain|pain to ribs|chest|forehead|pain)
+Type: PAIN_REGION
+---
+Comments: ''
+Direction: ''
+Lex: pain severity
+Regex: (rates her pain|rated his pain|aching|right jaw|pain|rated at)
+Type: PAIN_SEVERITY
+---
+Comments: ''
+Direction: ''
+Lex: pale
+Regex: '(warm dry skin|mucous membranes pale|clammy|skin is warm|skin: warm|pallor|pale|skin
+  cool dry|appears pale|skin baseline color|nm/wm/dry|pale color|skinw arm pink|skin
+  pale|skin normal|skin)'
+Type: PALE
+---
+Comments: ''
+Direction: ''
+Lex: palpitations
+Regex: (palp)
+Type: PALPITATIONS
+---
+Comments: ''
+Direction: ''
+Lex: pregnancy
+Regex: (obs|miscarriages|pregnant|ld)
+Type: PREGNANCY
+---
+Comments: ''
+Direction: ''
+Lex: pulse rate
+Regex: ''
+Type: PULSE_RATE
+---
+Comments: ''
+Direction: ''
+Lex: rales
+Regex: (rales)
+Type: RALES
+---
+Comments: ''
+Direction: ''
+Lex: rash
+Regex: (rashes|rash)
+Type: RASH
+---
+Comments: What does "respiratory rate" as a concept mean? Does it mean "abnormally
+  rapid breathing" aka "tachypnea/tachypneic"?
+Direction: ''
+Lex: respiratory rate
+Regex: (rr|tachypnea|resp|irregular respirations|agonal breathing|r|Cx rise|breathing
+  rate|tachypneic|respiratory rate)
+Type: RESPIRATORY_RATE
+---
+Comments: ''
+Direction: ''
+Lex: rhonchi
+Regex: (rales|CBBS|rhonchi)
+Type: RHONCHI
+---
+Comments: ''
+Direction: ''
+Lex: rigidity
+Regex: (nuchal rigidity|rigidity)
+Type: RIGIDITY
+---
+Comments: ''
+Direction: ''
+Lex: seizure
+Regex: (sz|postictal|seizure|seizures)
+Type: SEIZURE
+---
+Comments: ''
+Direction: ''
+Lex: shortness of breath
+Regex: (difficulty breathing|respirations are unlabored|non labored|sob|of shortness
+  breath|shortness of breath|adequate rate|dyspnea)
+Type: SHORTNESS_OF_BREATH
+---
+Comments: ''
+Direction: ''
+Lex: sleepiness
+Regex: (sleepy)
+Type: SLEEPINESS
+---
+Comments: ''
+Direction: ''
+Lex: suicidal thought
+Regex: (suicidal thought|suicidal|suicide|suicide attempt|suicidal ideations)
+Type: SUICIDAL_THOUGHT
+---
+Comments: ''
+Direction: ''
+Lex: tachycardia
+Regex: (shows sinus tachycardia|sinus tach|tachycardia|sinus tachycardia|tachycardic)
+Type: TACHYCARDIA
+---
+Comments: ''
+Direction: ''
+Lex: tenderness
+Regex: (rebound tenderness|back tenderness|sore|tenderness|tender)
+Type: TENDERNESS
+---
+Comments: ''
+Direction: ''
+Lex: trauma
+Regex: '(major bleeding|traumatic|trauma thoracic|crepitus and deformity|trauma chest|bruising|injury|illness
+  or injury|laceration|mva|burns|of head injury|lac|assault|MVA|gsw|atraumatic|moi|airbag
+  deployment|trauma extremities upper|injuries|traffic crash|assaulted|fall|head injury|mvc|traumatic
+  injury|DCAPBTLS: n/a|m of i|trauma|DCAPBTLS|traumatic injuries|dcapbtls|hi)'
+Type: TRAUMA
+---
+Comments: ''
+Direction: ''
+Lex: tripoding
+Regex: (tripoding)
+Type: TRIPODING
+---
+Comments: ''
+Direction: ''
+Lex: unequal femoral pulses
+Regex: ''
+Type: UNEQUAL_FEMORAL_PULSES
+---
+Comments: ''
+Direction: ''
+Lex: use of accessory muscles
+Regex: (accessory muscles|accessory muscle usage)
+Type: USE_OF_ACCESSORY_MUSCLES
+---
+Comments: ''
+Direction: ''
+Lex: vaginal bleeding
+Regex: (vaginal bleeding)
+Type: VAGINAL_BLEEDING
+---
+Comments: ''
+Direction: ''
+Lex: vaginal discharge
+Regex: (vaginal discharge)
+Type: VAGINAL_DISCHARGE
+---
+Comments: ''
+Direction: ''
+Lex: violent
+Regex: (aggressiveness|aggressive)
+Type: VIOLENT
+---
+Comments: ''
+Direction: ''
+Lex: vomiting
+Regex: (N/V/D|nausea/vomiting|NVD|nausea with vomiting|vomiting|vomiting blood|vomited|nvd|vomit|vomitting|n/v/d)
+Type: VOMITING
+---
+Comments: Is concept "weakness" related to term "facial droop"?
+Direction: ''
+Lex: weakness
+Regex: (presenting weakness|general weakness|generalized weakness|feels weaker|extremity
+  weakness|feels weak|weakness|facial droop)
+Type: WEAKNESS
+---
+Comments: ''
+Direction: ''
+Lex: wheezing
+Regex: (clear to ausc|clear bilaterally|lung sounds|rhonchi|lung sounds clear|wheeze|CBBS|wheezes|wheezing|breath
+  sounds|expiratory wheezing)
+Type: WHEEZING
+---
+Comments: ''
+Direction: ''
+Lex: abdominal pain
+Regex: (stomach hurts|stomach is cramping|guarding lower abdomen|abdominal pain)
+Type: ABDOMINAL_PAIN
+---
+Comments: ''
+Direction: ''
+Lex: agitated delirium
+Regex: (mildly agitated|agitated|agitation|speaking with profanity|uncooperative)
+Type: AGITATED_DELIRIUM
+---
+Comments: ''
+Direction: ''
+Lex: breath
+Regex: (difficulty breathing|resp|irregular respirations|lung sounds|shallow breaths|breath|breath
+  sounds|sob|abcs|bs|breathing rate|respiratory rate|dyspnea)
+Type: BREATH
+---
+Comments: ''
+Direction: ''
+Lex: Diaphoresis
+Regex: (diaphoretic skin)
+Type: DIAPHORESIS
+---
+Comments: ''
+Direction: ''
+Lex: intoxication
+Regex: (EtOH|etoh)
+Type: INTOXICATION
+---
+Comments: ''
+Direction: ''
+Lex: pain quality
+Regex: (described as sharp|pressure in her chest|worse|sharp|aching|pressure|described
+  pain|pain is dull)
+Type: PAIN_QUALITY
+---
+Comments: ''
+Direction: ''
+Lex: Pale
+Regex: (pale)
+Type: PALE
+---
+Comments: ''
+Direction: ''
+Lex: pulse irregularity
+Regex: (afib|irregular pulse)
+Type: PULSE_IRREGULARITY
+---
+Comments: ''
+Direction: ''
+Lex: pulse
+Regex: (tachycardia|radial pulses|tachycardic|pulse|pulses|bradycardic)
+Type: PULSE
+---
+Comments: ''
+Direction: ''
+Lex: last known well
+Regex: (lkw|lsn)
+Type: LAST_KNOWN_WELL
+---
+Comments: ''
+Direction: ''
+Lex: nausea vomitting diarrhea
+Regex: (nvd)
+Type: NAUSEA_VOMITTING_DIARRHEA
+---
+Comments: ''
+Direction: ''
+Lex: temperature pulse respirations
+Regex: (tpr)
+Type: TEMPERATURE_PULSE_RESPIRATIONS

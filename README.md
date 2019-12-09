@@ -1,1 +1,0 @@
-# pyConTextNLP-Negation-Detection
