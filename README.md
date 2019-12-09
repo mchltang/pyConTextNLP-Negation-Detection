@@ -2,8 +2,9 @@
 
 Tested to be working on Python 3.7.4.
 
-1. Create and activate new Python virtual environment:
+1. Create new Python virtual environment:
 	- python -m venv odemsa_venv
+2. Activate new Python virtual environment:
 	- ON LINUX:
 		- source odemsa_venv/bin/activate
 	- ON WINDOWS:
