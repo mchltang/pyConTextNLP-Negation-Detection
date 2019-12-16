@@ -32,20 +32,19 @@ def update_concept_targets(ems_ontology_df):
 
 
     # SECOND: read the ems ontology df
-    # two cases:
-    # 1) if concept in ontology does not exist in our dictionary, add it with a new set
-    # 2) if concept exists, add the regex to that set
+    # if concept exists, add the regex to that set
     for index, row in ems_ontology_df.iterrows():
         row_ontology_concept = row[0]
         row_ontology_regex = row[1]
         if row_ontology_concept in dict_concepts_to_sets:
             dict_concepts_to_sets[row_ontology_concept].add(row_ontology_regex)
-        else:
-            dict_concepts_to_sets[row_ontology_concept] = set()
-            dict_metadata[row_ontology_concept] = {}
-            dict_metadata[row_ontology_concept]['Comments'] = ''
-            dict_metadata[row_ontology_concept]['Direction'] = ''
-            dict_metadata[row_ontology_concept]['Type'] = row_ontology_concept.upper().replace(' ', '_')
+        # # if concept in ontology does not exist in our dictionary, add it with a new set
+        # else:
+        #     dict_concepts_to_sets[row_ontology_concept] = set()
+        #     dict_metadata[row_ontology_concept] = {}
+        #     dict_metadata[row_ontology_concept]['Comments'] = ''
+        #     dict_metadata[row_ontology_concept]['Direction'] = ''
+        #     dict_metadata[row_ontology_concept]['Type'] = row_ontology_concept.upper().replace(' ', '_')
 
 
     # THIRD: convert our map of concept -> regex back to a yaml file

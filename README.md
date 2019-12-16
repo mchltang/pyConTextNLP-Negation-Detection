@@ -19,6 +19,7 @@ Tested to be working on Python 3.7.4.
 	- Extract the zip file
 	- cd nmslib\python_bindings\
 	- python setup.py install
+	- cd ../..
 3. Run:
 	- pip install https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.4/en_core_sci_lg-0.2.4.tar.gz
 4. Install pip requirements:

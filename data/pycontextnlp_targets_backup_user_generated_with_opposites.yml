@@ -13,13 +13,13 @@ Type: AGITATION
 Comments: ''
 Direction: ''
 Lex: anxiety
-Regex: (anxiety|panic attacks|hyperventilating|tx|scared|anxious|anxiety level)
+Regex: ''
 Type: ANXIETY
 ---
 Comments: ''
 Direction: ''
 Lex: bizarre behavior
-Regex: (behaving strangely|acting erratic)
+Regex: ''
 Type: BIZARRE_BEHAVIOR
 ---
 Comments: ''
@@ -31,32 +31,31 @@ Type: BLINDNESS
 Comments: ''
 Direction: ''
 Lex: blood pressure
-Regex: (blood pressure|bp|htn|antihypertensive|hypertension)
+Regex: ''
 Type: BLOOD_PRESSURE
 ---
 Comments: ''
 Direction: ''
 Lex: chest pain
-Regex: (sharp pains chest|burning pain of chest|cx pain|cp|sharp chest pain|sharp
-  pain breast|chest pain)
+Regex: (chest pain|cp|cx pain)
 Type: CHEST_PAIN
 ---
 Comments: ''
 Direction: ''
 Lex: clammy skin
-Regex: (cool pale|cool|clammy)
+Regex: ''
 Type: CLAMMY_SKIN
 ---
 Comments: ''
 Direction: ''
 Lex: combative
-Regex: (combative)
+Regex: ''
 Type: COMBATIVE
 ---
 Comments: ''
 Direction: ''
 Lex: confusion
-Regex: (confused|disoriented)
+Regex: ''
 Type: CONFUSION
 ---
 Comments: ''
@@ -68,22 +67,19 @@ Type: CONSTIPATION
 Comments: ''
 Direction: ''
 Lex: cool skin
-Regex: (diphoretic|cool skin)
+Regex: ''
 Type: COOL_SKIN
 ---
 Comments: ''
 Direction: ''
 Lex: cough
-Regex: (barky cough|dbc|coughing|cough)
+Regex: ''
 Type: COUGH
 ---
 Comments: ''
 Direction: ''
 Lex: decreased mental status
-Regex: (Aox2|alert|AY&Ox4|unresponsive|aox1|aox3|caox1|gcs|acting appropriately|ayox4|lethargic|AOX4|alert
-  to verbal|A&O x 1|aox4|avpu|slumped over|responsive to verbal|responsive to pain|ANOx4|aox2|semiconscious|anox4|A&Ox2
-  basline|post ictal|ams|caox2|acting out|cx|CAox4|GCS|AMS|slow responsiveness|not
-  alert|found altered|appears lethargic|A&Ox4|caox4|caox3)
+Regex: ''
 Type: DECREASED_MENTAL_STATUS
 ---
 Comments: ''
@@ -101,86 +97,85 @@ Type: DELUSIONAL_THOUGHTS
 Comments: ''
 Direction: ''
 Lex: malaise
-Regex: (distress|near syncope|general malaise|feel crummy|discomfort|malaise|ill|feeling
-  weak)
+Regex: (malaise|distress|discomfort)
 Type: MALAISE
 ---
 Comments: ''
 Direction: ''
 Lex: diaphoresis
-Regex: (skin is warm|diaphoresis|skin diaphoretic|diaphoretic)
+Regex: ''
 Type: DIAPHORESIS
 ---
 Comments: ''
 Direction: ''
 Lex: diarrhea
-Regex: (nvd|diarrhea|n/v/d)
+Regex: (diarrhea|nvd|n/v/d)
 Type: DIARRHEA
 ---
 Comments: ''
 Direction: ''
 Lex: distension
-Regex: (distended|distention|abdomen distended|distension)
+Regex: (distension|distention|distended)
 Type: DISTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: dizziness
-Regex: (dizzyness|dizziness|vertigo|lightheadedness|dizzy)
+Regex: (dizziness|dizzyness)
 Type: DIZZINESS
 ---
 Comments: ''
 Direction: ''
 Lex: dysrhythmia
-Regex: (atrial ectopy|vtach|arrythmia)
+Regex: ''
 Type: DYSRHYTHMIA
 ---
 Comments: ''
 Direction: ''
 Lex: dysuria
-Regex: (difficulty urinating|dysuria)
+Regex: (dysuria|difficulty urinating)
 Type: DYSURIA
 ---
 Comments: ''
 Direction: ''
 Lex: fever
-Regex: (fevers|temperature 99.7F|feverish|fever|afebrile)
+Regex: (fever|fevers)
 Type: FEVER
 ---
 Comments: ''
 Direction: ''
 Lex: hallucinations
-Regex: (hallucinations|auditory hallucinations)
+Regex: ''
 Type: HALLUCINATIONS
 ---
 Comments: ''
 Direction: ''
 Lex: headache
-Regex: (head ache|headache|head pain|ha|headaches)
+Regex: (headache|head ache|head pain)
 Type: HEADACHE
 ---
 Comments: ''
 Direction: ''
 Lex: homicidal thoughts
-Regex: (homicide|homicidal thoughts|homicidal ideations|homicidal|murder)
+Regex: (homicidal thoughts|homicidal|homicide|homicidal ideations|murder)
 Type: HOMICIDAL_THOUGHTS
 ---
 Comments: ''
 Direction: ''
 Lex: hypertension
-Regex: (htn|hypertension|BP very elevated)
+Regex: ''
 Type: HYPERTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: hyperthermia
-Regex: (fevers)
+Regex: ''
 Type: HYPERTHERMIA
 ---
 Comments: ''
 Direction: ''
 Lex: hypotension
-Regex: (blood pressure)
+Regex: ''
 Type: HYPOTENSION
 ---
 Comments: ''
@@ -192,25 +187,25 @@ Type: HYPOTHERMIA
 Comments: ''
 Direction: ''
 Lex: incontinence
-Regex: (incontinent|incontinence|incontinent of urine)
+Regex: (incontinence|incontinent)
 Type: INCONTINENCE
 ---
 Comments: ''
 Direction: ''
 Lex: lightheadedness
-Regex: (dizzyness|dizziness|light|lightheaded|light headedness|lightheadedness|dizzy)
+Regex: (lightheadedness|light headedness)
 Type: LIGHTHEADEDNESS
 ---
 Comments: ''
 Direction: ''
 Lex: loss of consciousness
-Regex: (fainting|passed out|LOC|loss of consciousness|unconscious|syncope|vaso vagle|loa|loc|fainted)
+Regex: (loss of consciousness|loc|syncope)
 Type: LOSS_OF_CONSCIOUSNESS
 ---
 Comments: ''
 Direction: ''
 Lex: mental status changes
-Regex: (lethargic)
+Regex: ''
 Type: MENTAL_STATUS_CHANGES
 ---
 Comments: ''
@@ -222,52 +217,49 @@ Type: MYALGIAS
 Comments: ''
 Direction: ''
 Lex: nausea
-Regex: (nvd|nausea/vomiting|nausea with vomiting|n/v/d|nauseated|nauseous|nausea)
+Regex: (nausea|nvd|n/v/d)
 Type: NAUSEA
 ---
 Comments: ''
 Direction: ''
 Lex: pain
-Regex: (has pain|painful|tx|pain|back hurts|in obvious pain)
+Regex: ''
 Type: PAIN
 ---
 Comments: Should "radiation" alone be a form of "pain radiation" as a concept?
 Direction: ''
 Lex: pain radiation
-Regex: (nonradiating|radiation|pain radiation|radiating|radiation pain)
+Regex: (pain radiation|radiation|radiating)
 Type: PAIN_RADIATION
 ---
 Comments: ''
 Direction: ''
 Lex: pain region
-Regex: (neck pain|lower back pain|pain|upper abdomen|pain region|chest|forehead|pain
-  to ribs)
+Regex: (pain region|lower back pain)
 Type: PAIN_REGION
 ---
 Comments: ''
 Direction: ''
 Lex: pain severity
-Regex: (rated at|rated his pain|right jaw|aching|rates her pain|pain)
+Regex: ''
 Type: PAIN_SEVERITY
 ---
 Comments: ''
 Direction: ''
 Lex: pale
-Regex: '(skin: warm|skin baseline color|warm dry skin|pale|skin|pale color|nm/wm/dry|clammy|skin
-  cool dry|skin normal|pallor|appears pale|skin pale|skinw arm pink|skin is warm|mucous
-  membranes pale)'
+Regex: (pale|pallor)
 Type: PALE
 ---
 Comments: ''
 Direction: ''
 Lex: palpitations
-Regex: (palp)
+Regex: ''
 Type: PALPITATIONS
 ---
 Comments: ''
 Direction: ''
 Lex: pregnancy
-Regex: (miscarriages|obs|ld|pregnant)
+Regex: ''
 Type: PREGNANCY
 ---
 Comments: ''
@@ -279,7 +271,7 @@ Type: PULSE_RATE
 Comments: ''
 Direction: ''
 Lex: rales
-Regex: (rales)
+Regex: ''
 Type: RALES
 ---
 Comments: ''
@@ -288,77 +280,70 @@ Lex: rash
 Regex: (rash|rashes)
 Type: RASH
 ---
-Comments: What does "respiratory rate" as a concept mean? Does it mean "abnormally
-  rapid breathing" aka "tachypnea/tachypneic"?
+Comments: What does "respiratory rate" as a concept mean? Does it mean "abnormally rapid breathing" aka "tachypnea/tachypneic"?
 Direction: ''
 Lex: respiratory rate
-Regex: (agonal breathing|irregular respirations|breathing rate|rr|Cx rise|resp|tachypneic|tachypnea|r|respiratory
-  rate)
+Regex: (respiratory rate|tachypnea|tachypneic)
 Type: RESPIRATORY_RATE
 ---
 Comments: ''
 Direction: ''
 Lex: rhonchi
-Regex: (rhonchi|CBBS|rales)
+Regex: ''
 Type: RHONCHI
 ---
 Comments: ''
 Direction: ''
 Lex: rigidity
-Regex: (nuchal rigidity|rigidity)
+Regex: ''
 Type: RIGIDITY
 ---
 Comments: ''
 Direction: ''
 Lex: seizure
-Regex: (sz|seizures|postictal|seizure)
+Regex: ''
 Type: SEIZURE
 ---
 Comments: ''
 Direction: ''
 Lex: shortness of breath
-Regex: (dyspnea|of shortness breath|shortness of breath|non labored|sob|difficulty
-  breathing|respirations are unlabored|adequate rate)
+Regex: (shortness of breath|sob|dyspnea|difficulty breathing)
 Type: SHORTNESS_OF_BREATH
 ---
 Comments: ''
 Direction: ''
 Lex: sleepiness
-Regex: (sleepy)
+Regex: ''
 Type: SLEEPINESS
 ---
 Comments: ''
 Direction: ''
 Lex: suicidal thought
-Regex: (suicidal|suicidal thought|suicidal ideations|suicide|suicide attempt)
+Regex: (suicidal thought|suicidal|suicide|suicidal ideations)
 Type: SUICIDAL_THOUGHT
 ---
 Comments: ''
 Direction: ''
 Lex: tachycardia
-Regex: (sinus tach|sinus tachycardia|tachycardia|shows sinus tachycardia|tachycardic)
+Regex: ''
 Type: TACHYCARDIA
 ---
 Comments: ''
 Direction: ''
 Lex: tenderness
-Regex: (sore|rebound tenderness|back tenderness|tender|tenderness)
+Regex: (tenderness|tender)
 Type: TENDERNESS
 ---
 Comments: ''
 Direction: ''
 Lex: trauma
-Regex: '(crepitus and deformity|trauma chest|traumatic injury|traffic crash|injuries|mva|trauma
-  extremities upper|trauma|bruising|moi|trauma thoracic|head injury|MVA|assaulted|burns|airbag
-  deployment|assault|hi|atraumatic|gsw|m of i|lac|dcapbtls|major bleeding|mvc|illness
-  or injury|injury|of head injury|laceration|traumatic|DCAPBTLS|fall|DCAPBTLS: n/a|traumatic
-  injuries)'
+Regex: (trauma|traumatic|traumatic injuries|injury|injuries)
 Type: TRAUMA
 ---
 Comments: ''
 Direction: ''
 Lex: tripoding
-Regex: (tripoding)
+Regex: ''
 Type: TRIPODING
 ---
 Comments: ''
@@ -370,45 +355,43 @@ Type: UNEQUAL_FEMORAL_PULSES
 Comments: ''
 Direction: ''
 Lex: use of accessory muscles
-Regex: (accessory muscle usage|accessory muscles)
+Regex: ''
 Type: USE_OF_ACCESSORY_MUSCLES
 ---
 Comments: ''
 Direction: ''
 Lex: vaginal bleeding
-Regex: (vaginal bleeding)
+Regex: ''
 Type: VAGINAL_BLEEDING
 ---
 Comments: ''
 Direction: ''
 Lex: vaginal discharge
-Regex: (vaginal discharge)
+Regex: ''
 Type: VAGINAL_DISCHARGE
 ---
 Comments: ''
 Direction: ''
 Lex: violent
-Regex: (aggressive|aggressiveness)
+Regex: ''
 Type: VIOLENT
 ---
 Comments: ''
 Direction: ''
 Lex: vomiting
-Regex: (nvd|nausea/vomiting|vomitting|nausea with vomiting|n/v/d|vomiting blood|N/V/D|NVD|vomit|vomited|vomiting)
+Regex: (vomiting|vomitting|vomit|nvd|n/v/d)
 Type: VOMITING
 ---
 Comments: Is concept "weakness" related to term "facial droop"?
 Direction: ''
 Lex: weakness
-Regex: (generalized weakness|presenting weakness|feels weaker|weakness|facial droop|extremity
-  weakness|general weakness|feels weak)
+Regex: (weakness|facial droop)
 Type: WEAKNESS
 ---
 Comments: ''
 Direction: ''
 Lex: wheezing
-Regex: (rhonchi|CBBS|clear to ausc|breath sounds|expiratory wheezing|wheeze|wheezing|clear
-  bilaterally|wheezes|lung sounds clear|lung sounds)
+Regex: ''
 Type: WHEEZING
 ---
 Comments: ''
@@ -660,7 +643,7 @@ Type: PAIN_SEVERITY_OPPOSITE
 Comments: ''
 Direction: ''
 Lex: pale opposite
-Regex: (warm|warm and dry|dry)
+Regex: (warm|dry|warm and dry)
 Type: PALE_OPPOSITE
 ---
 Comments: ''

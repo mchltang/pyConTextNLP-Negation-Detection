@@ -31,7 +31,12 @@ def negations_pycontextnlp(clinical_text_df):
         print("Detected negated concepts:")
         set_detected_negated_concepts = set()
         for edge in list_detected_negated_edges:
-            set_detected_negated_concepts.add("".join(edge[1].getCategory()[0].split('_')))
+            # handle opposite case
+            if 'opposite' in edge[1].getCategory()[0]:
+                set_detected_negated_concepts.add("".join(edge[1].getCategory()[0].split('_opposite')))
+            # handle negative edge case
+            elif 'neg' in edge[0].getCategory()[0]:
+                set_detected_negated_concepts.add("".join(edge[1].getCategory()[0].split('_')))
         print(set_detected_negated_concepts)
 
         print("Expected negated concepts:")
@@ -120,16 +125,20 @@ def pycontextnlp_markup_sentence(s, modifiers, targets, prune_inactive=True):
     list_negated_edges = []
 
     for edge in markup.edges():
-        modifier_category = edge[0].getCategory()
-        if('neg' in modifier_category[0]):
-            # print(edge)
-            list_negated_edges.append(edge)
+        # modifier_category = edge[0].getCategory()
+        # if('neg' in modifier_category[0]):
+        #     # print(edge)
+        #     list_negated_edges.append(edge)
+        list_negated_edges.append(edge)
 
     return list_negated_edges
 
 
 def main():
-    clinical_text_df = pd.read_excel("data/ConceptExtracEval_ODEMSA.xls")
+    # clinical_text_df = pd.read_excel("data/ConceptExtracEval_ODEMSA.xls")
+
+    # file used for testing purposes
+    clinical_text_df = pd.read_excel("data/test_opposite_concepts.xls")
 
     # pycontextnlp method
     negations_pycontextnlp(clinical_text_df)
