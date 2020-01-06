@@ -15,7 +15,9 @@ def negations_pycontextnlp(clinical_text_df):
     total_neg_concepts_detected = 0
     total_neg_concepts_passed = 0
 
-    total_sum_frac_float = 0.
+    precision_sum = 0.
+    recall_sum = 0.
+    f1_sum = 0.
     total_transcripts_passed = 0.
 
     for index, row in clinical_text_df.iterrows():
@@ -64,26 +66,38 @@ def negations_pycontextnlp(clinical_text_df):
         print(expected_negated_concepts)
 
         num_neg_concepts_passed = 0
-        num_neg_concepts_detected = 0
+        true_positives = 0
+        false_positives = 0
         for concept in expected_negated_concepts:
-            if(concept in set_detected_negated_concepts):
-                num_neg_concepts_detected += 1
+            if concept in set_detected_negated_concepts:
+                true_positives += 1
+            else:
+                false_positives += 1
             num_neg_concepts_passed += 1
 
-        print("Number of negated concepts detected / Total negated concepts: " + str(num_neg_concepts_detected) + '/' + str(num_neg_concepts_passed))
+        transcript_precision = true_positives / (true_positives + false_positives)
+        print("Precision for this transcript: " + str(transcript_precision))
+        transcript_recall = true_positives / num_neg_concepts_passed
+        print("Recall for this transcript: " + str(transcript_recall))
+        transcript_f1 = 2 * ((transcript_precision * transcript_recall)/(transcript_precision + transcript_recall))
+        print("F1 for this transcript: " + str(transcript_f1))
 
-        total_neg_concepts_detected += num_neg_concepts_detected
+        total_neg_concepts_detected += true_positives
         total_neg_concepts_passed += num_neg_concepts_passed
 
-        if(num_neg_concepts_passed != 0):
-            total_sum_frac_float += (num_neg_concepts_detected / num_neg_concepts_passed)
+        if num_neg_concepts_passed != 0:
+            precision_sum += transcript_precision
+            recall_sum += transcript_recall
+            f1_sum += transcript_f1
             total_transcripts_passed += 1.
 
         print('\n\n')
 
     print('###################################################')
     print('Total number of negated concepts detected / All negated concepts: ' + str(total_neg_concepts_detected) + '/' + str(total_neg_concepts_passed))
-    print('Average recall: ' + str(total_sum_frac_float / total_transcripts_passed))
+    print('Average precision: ' + str(precision_sum / total_transcripts_passed))
+    print('Average recall: ' + str(recall_sum / total_transcripts_passed))
+    print('Average F1: ' + str(f1_sum / total_transcripts_passed))
 
 
 def negations_pycontextnlp_individual_transcript(nlp, clinical_text):
@@ -135,10 +149,10 @@ def pycontextnlp_markup_sentence(s, modifiers, targets, prune_inactive=True):
 
 
 def main():
-    # clinical_text_df = pd.read_excel("data/ConceptExtracEval_ODEMSA.xls")
+    clinical_text_df = pd.read_excel("data/ConceptExtracEval_ODEMSA.xls")
 
     # file used for testing purposes
-    clinical_text_df = pd.read_excel("data/test_opposite_concepts.xls")
+    # clinical_text_df = pd.read_excel("data/test_opposite_concepts.xls")
 
     # pycontextnlp method
     negations_pycontextnlp(clinical_text_df)
