@@ -13,7 +13,7 @@ def negations_pycontextnlp(clinical_text_df):
     scispacy_model.add_pipe(scispacy_model.create_pipe('sentencizer'), before="parser")
 
     total_neg_concepts_detected = 0
-    total_neg_concepts_passed = 0
+    total_expected_negated_concepts = 0
 
     precision_sum = 0.
     recall_sum = 0.
@@ -25,7 +25,7 @@ def negations_pycontextnlp(clinical_text_df):
         if(pd.isna(clinical_text_df.iloc[index, 0])):
             continue
 
-        print("Transcript " + str(index) + ":")
+        print("Transcript " + str(index) + ", row " + str(index + 2) + ":")
 
         # print("Detected negated edges:")
         list_detected_negated_edges = negations_pycontextnlp_individual_transcript(scispacy_model, row[0])
@@ -42,59 +42,67 @@ def negations_pycontextnlp(clinical_text_df):
         print(set_detected_negated_concepts)
 
         print("Expected negated concepts:")
-        expected_concepts = "".join(row[1].split())
-        if(len(expected_concepts) == 0):
-            continue
-        expected_concepts = expected_concepts[1:-1].split(')(')
-        expected_negated_concepts = []
-        for concept in expected_concepts:
-            if('false' in concept or 'False' in concept):
+        if pd.isnull(row[1]):
+            expected_negated_concepts = []
+        else:
+            expected_concepts = "".join(row[1].split())
+            expected_concepts = expected_concepts[1:-1].split(')(')
+            expected_negated_concepts = []
+            for concept in expected_concepts:
+                if('false' in concept or 'False' in concept):
 
-                # TEMPORARY: ignore corner cases of related concepts
-                # if(
-                #     'breath' not in concept
-                #     and 'shortnessofbreath' not in concept
-                #
-                #     and 'lightheadedness' not in concept
-                #     and 'dizziness' not in concept
-                #
-                #     and 'hyperthermia' not in concept
-                #     and 'fever' not in concept
-                # ):
+                    # TEMPORARY: ignore corner cases of related concepts
+                    # if(
+                    #     'breath' not in concept
+                    #     and 'shortnessofbreath' not in concept
+                    #
+                    #     and 'lightheadedness' not in concept
+                    #     and 'dizziness' not in concept
+                    #
+                    #     and 'hyperthermia' not in concept
+                    #     and 'fever' not in concept
+                    # ):
 
-                expected_negated_concepts.append(concept.split(',')[0])
+                    expected_negated_concepts.append(concept.split(',')[0])
         print(expected_negated_concepts)
 
-        num_neg_concepts_passed = 0
-        true_positives = 0
-        false_positives = 0
-        for concept in expected_negated_concepts:
-            if concept in set_detected_negated_concepts:
-                true_positives += 1
+        true_positives = 0.
+        false_positives = 0.
+        for concept in set_detected_negated_concepts:
+            if concept in expected_negated_concepts:
+                true_positives += 1.
             else:
-                false_positives += 1
-            num_neg_concepts_passed += 1
+                false_positives += 1.
+        false_negatives = len(expected_negated_concepts) - true_positives
 
-        transcript_precision = true_positives / (true_positives + false_positives)
+        if true_positives == 0 and false_positives == 0 and false_negatives == 0:
+            transcript_precision = 1.
+            transcript_recall = 1.
+            transcript_f1 = 1.
+        elif true_positives == 0 and (false_positives > 0 or false_negatives > 0):
+            transcript_precision = 0.
+            transcript_recall = 0.
+            transcript_f1 = 0.
+        else:
+            transcript_precision = true_positives / (true_positives + false_positives)
+            transcript_recall = true_positives / (true_positives + false_negatives)
+            transcript_f1 = 2 * ((transcript_precision * transcript_recall)/(transcript_precision + transcript_recall))
+
         print("Precision for this transcript: " + str(transcript_precision))
-        transcript_recall = true_positives / num_neg_concepts_passed
         print("Recall for this transcript: " + str(transcript_recall))
-        transcript_f1 = 2 * ((transcript_precision * transcript_recall)/(transcript_precision + transcript_recall))
         print("F1 for this transcript: " + str(transcript_f1))
 
         total_neg_concepts_detected += true_positives
-        total_neg_concepts_passed += num_neg_concepts_passed
-
-        if num_neg_concepts_passed != 0:
-            precision_sum += transcript_precision
-            recall_sum += transcript_recall
-            f1_sum += transcript_f1
-            total_transcripts_passed += 1.
+        total_expected_negated_concepts += len(expected_negated_concepts)
+        precision_sum += transcript_precision
+        recall_sum += transcript_recall
+        f1_sum += transcript_f1
+        total_transcripts_passed += 1.
 
         print('\n\n')
 
     print('###################################################')
-    print('Total number of negated concepts detected / All negated concepts: ' + str(total_neg_concepts_detected) + '/' + str(total_neg_concepts_passed))
+    print('Total number of negated concepts detected / All negated concepts: ' + str(total_neg_concepts_detected) + '/' + str(total_expected_negated_concepts))
     print('Average precision: ' + str(precision_sum / total_transcripts_passed))
     print('Average recall: ' + str(recall_sum / total_transcripts_passed))
     print('Average F1: ' + str(f1_sum / total_transcripts_passed))
@@ -149,7 +157,7 @@ def pycontextnlp_markup_sentence(s, modifiers, targets, prune_inactive=True):
 
 
 def main():
-    clinical_text_df = pd.read_excel("data/ConceptExtracEval_ODEMSA.xls")
+    clinical_text_df = pd.read_excel("data/eimara_annotations.xls")
 
     # file used for testing purposes
     # clinical_text_df = pd.read_excel("data/test_opposite_concepts.xls")
