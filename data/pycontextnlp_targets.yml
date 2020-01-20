@@ -565,7 +565,7 @@ Comments: What does "respiratory rate" as a concept mean? Does it mean "abnormal
   rapid breathing" aka "tachypnea/tachypneic"?
 Direction: ''
 Lex: respiratory rate
-Regex: (respiratory rate|r|rr|tachypnea|tachypneic)
+Regex: (respiratory rate|rr|tachypnea|tachypneic)
 Type: RESPIRATORY_RATE
 ---
 Comments: ''
