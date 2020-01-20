@@ -147,7 +147,7 @@ Lex: cough
 Regex: (spit up|clear the throat|cough frequency|postural cough|no cough|whooping
   cough due to unspecified organism|have been coughing|cough up|cough adverse event|pertussis|nocturnal
   cough|tussive|barking cough|hack|usual severity cough|chronic cough|encouragement
-  of deep breathing and coughing exercises|cough|symptom|coughing|cough reflex|expectorate|hawk|how
+  of deep breathing and coughing exercises|cough|coughing|cough reflex|expectorate|hawk|how
   much distress cough|whoop|hacking cough|cough at rest|productive cough|dbc|cough
   x cough relief|cough out|spit out|paroxysmal cough|decreased coughing|cough  guaifenesin|antitussive
   agents|explosive)
@@ -364,11 +364,11 @@ Direction: ''
 Lex: hypothermia
 Regex: (gastric hypothermia|induced hypothermia  finding|immersion hypothermia|hypothermia
   due to exposure|hypothermia with hypotension|hypothermia find pt  patient ord observed
-  ccc|deep hypothermia|o e   hypothermia|hypothermia neonatal|accidental|hypothermia
-  of newborn|caps|hypothermia|induced|hypothermia local|cooling units|hypothermia
-  adverse event|anesthetic hypothermia|hypothermia central|hypothermia treatment|patient|natural|at
+  ccc|deep hypothermia|o e   hypothermia|hypothermia neonatal|hypothermia
+  of newborn|caps|hypothermia|hypothermia local|cooling units|hypothermia
+  adverse event|anesthetic hypothermia|hypothermia central|hypothermia treatment|at
   risk hypothermia|mild hypothermia|moderate hypothermia|hypothermia caused by anesthetic|profound
-  hypothermia)
+  hypothermia|hypothermia)
 Type: HYPOTHERMIA
 ---
 Comments: ''
@@ -676,7 +676,7 @@ Regex: (cryopathy|nursing specialty|strain|pull|burn injury|hurt|spinal injuries
   injury|whiplash|trauma assessment and care|craniocerebral trauma|penetrating trauma|weal|eye
   injuries|traumatic|frostbite|injuries|spinal cord injuries|trauma centers|dcapbtls|moi|gsw|rupture|wrench|knee
   injuries|harm|radiation injury|hemorrhage|electric shock|injury|traumatic injury|traumatic
-  injuries|wounds and injuries|wale|combat disorders|hi|mvc|lesion|pinch|thoracic
+  injuries|wounds and injuries|wale|combat disorders|mvc|lesion|pinch|thoracic
   injuries|burn|penetrating injury|insect bite|welt|birth trauma|noise induced hearing
   loss|smoke inhalation injury|twist|trauma units)
 Type: TRAUMA

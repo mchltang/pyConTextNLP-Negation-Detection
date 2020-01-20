@@ -39,13 +39,15 @@ def negations_pycontextnlp(clinical_text_df):
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_opposite'))
                 set_detected_negated_concepts.add(to_add)
                 print("negated concept '" + to_add + "' detected at position (" + str(
-                    list_positions[idx][0]) + ", " + str(list_positions[idx][1]) + ")")
+                    list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + "), (" + str(
+                    list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ")")
             # handle negative edge case
             elif 'neg' in list_detected_negated_edges[idx][0].getCategory()[0]:
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_'))
                 set_detected_negated_concepts.add(to_add)
                 print("negated concept '" + to_add + "' detected at position (" + str(
-                    list_positions[idx][0]) + ", " + str(list_positions[idx][1]) + ")")
+                    list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + "), (" + str(
+                    list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ")")
         print(set_detected_negated_concepts)
 
         print("Expected negated concepts:")
@@ -124,7 +126,7 @@ def negations_pycontextnlp_individual_transcript(nlp, clinical_text):
     targets = itemData.get_items(PYCONTEXTNLP_TARGETS)
 
     sentences = nlp(clinical_text)
-    sentences = [sent.string.strip() for sent in sentences.sents]
+    sentences = [sent.string for sent in sentences.sents]
 
     list_negated_edges = []
     list_positions = []
@@ -134,7 +136,11 @@ def negations_pycontextnlp_individual_transcript(nlp, clinical_text):
         returned_negated_edges = pycontextnlp_markup_sentence(sentence.lower(), modifiers, targets)
         for edge in returned_negated_edges:
             list_positions.append(
-                (curr_combined_length + edge[0].getSpan()[0], curr_combined_length + edge[1].getSpan()[1]))
+                (
+                    (curr_combined_length + edge[0].getSpan()[0], curr_combined_length + edge[0].getSpan()[1]),
+                    (curr_combined_length + edge[1].getSpan()[0], curr_combined_length + edge[1].getSpan()[1])
+                )
+            )
         curr_combined_length += len(sentence)
         list_negated_edges.extend(returned_negated_edges)
 
