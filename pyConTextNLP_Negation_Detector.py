@@ -22,23 +22,30 @@ def negations_pycontextnlp(clinical_text_df):
 
     for index, row in clinical_text_df.iterrows():
         # if the row has a NaN value in the transcripts column, skip it
-        if(pd.isna(clinical_text_df.iloc[index, 0])):
+        if (pd.isna(clinical_text_df.iloc[index, 0])):
             continue
 
         print("Transcript " + str(index) + ", row " + str(index + 2) + ":")
 
         # print("Detected negated edges:")
-        list_detected_negated_edges = negations_pycontextnlp_individual_transcript(scispacy_model, row[0])
+        list_detected_negated_edges, list_positions = negations_pycontextnlp_individual_transcript(scispacy_model,
+                                                                                                   row[0])
 
         print("Detected negated concepts:")
         set_detected_negated_concepts = set()
-        for edge in list_detected_negated_edges:
+        for idx in range(len(list_detected_negated_edges)):
             # handle opposite case
-            if 'opposite' in edge[1].getCategory()[0]:
-                set_detected_negated_concepts.add("".join(edge[1].getCategory()[0].split('_opposite')))
+            if 'opposite' in list_detected_negated_edges[idx][1].getCategory()[0]:
+                to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_opposite'))
+                set_detected_negated_concepts.add(to_add)
+                print("negated concept '" + to_add + "' detected at position (" + str(
+                    list_positions[idx][0]) + ", " + str(list_positions[idx][1]) + ")")
             # handle negative edge case
-            elif 'neg' in edge[0].getCategory()[0]:
-                set_detected_negated_concepts.add("".join(edge[1].getCategory()[0].split('_')))
+            elif 'neg' in list_detected_negated_edges[idx][0].getCategory()[0]:
+                to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_'))
+                set_detected_negated_concepts.add(to_add)
+                print("negated concept '" + to_add + "' detected at position (" + str(
+                    list_positions[idx][0]) + ", " + str(list_positions[idx][1]) + ")")
         print(set_detected_negated_concepts)
 
         print("Expected negated concepts:")
@@ -49,8 +56,7 @@ def negations_pycontextnlp(clinical_text_df):
             expected_concepts = expected_concepts[1:-1].split(')(')
             expected_negated_concepts = []
             for concept in expected_concepts:
-                if('false' in concept or 'False' in concept):
-
+                if ('false' in concept or 'False' in concept):
                     # TEMPORARY: ignore corner cases of related concepts
                     # if(
                     #     'breath' not in concept
@@ -86,7 +92,8 @@ def negations_pycontextnlp(clinical_text_df):
         else:
             transcript_precision = true_positives / (true_positives + false_positives)
             transcript_recall = true_positives / (true_positives + false_negatives)
-            transcript_f1 = 2 * ((transcript_precision * transcript_recall)/(transcript_precision + transcript_recall))
+            transcript_f1 = 2 * (
+                        (transcript_precision * transcript_recall) / (transcript_precision + transcript_recall))
 
         print("Precision for this transcript: " + str(transcript_precision))
         print("Recall for this transcript: " + str(transcript_recall))
@@ -102,7 +109,8 @@ def negations_pycontextnlp(clinical_text_df):
         print('\n\n')
 
     print('###################################################')
-    print('Total number of negated concepts detected / All negated concepts: ' + str(total_neg_concepts_detected) + '/' + str(total_expected_negated_concepts))
+    print('Total number of negated concepts detected / All negated concepts: ' + str(
+        total_neg_concepts_detected) + '/' + str(total_expected_negated_concepts))
     print('Average precision: ' + str(precision_sum / total_transcripts_passed))
     print('Average recall: ' + str(recall_sum / total_transcripts_passed))
     print('Average F1: ' + str(f1_sum / total_transcripts_passed))
@@ -119,11 +127,18 @@ def negations_pycontextnlp_individual_transcript(nlp, clinical_text):
     sentences = [sent.string.strip() for sent in sentences.sents]
 
     list_negated_edges = []
+    list_positions = []
+    curr_combined_length = 0
 
     for sentence in sentences:
-        list_negated_edges.extend(pycontextnlp_markup_sentence(sentence.lower(), modifiers, targets))
+        returned_negated_edges = pycontextnlp_markup_sentence(sentence.lower(), modifiers, targets)
+        for edge in returned_negated_edges:
+            list_positions.append(
+                (curr_combined_length + edge[0].getSpan()[0], curr_combined_length + edge[1].getSpan()[1]))
+        curr_combined_length += len(sentence)
+        list_negated_edges.extend(returned_negated_edges)
 
-    return list_negated_edges
+    return (list_negated_edges, list_positions)
 
 
 def pycontextnlp_markup_sentence(s, modifiers, targets, prune_inactive=True):
