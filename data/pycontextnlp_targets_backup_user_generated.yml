@@ -1,37 +1,37 @@
 Comments: ''
 Direction: ''
 Lex: absent femoral pulses
-Regex: ''
+Regex: (absent femoral pulses)
 Type: ABSENT_FEMORAL_PULSES
 ---
 Comments: ''
 Direction: ''
 Lex: agitation
-Regex: ''
+Regex: (agitation)
 Type: AGITATION
 ---
 Comments: ''
 Direction: ''
 Lex: anxiety
-Regex: ''
+Regex: (anxiety)
 Type: ANXIETY
 ---
 Comments: ''
 Direction: ''
 Lex: bizarre behavior
-Regex: ''
+Regex: (bizarre behavior)
 Type: BIZARRE_BEHAVIOR
 ---
 Comments: ''
 Direction: ''
 Lex: blindness
-Regex: ''
+Regex: (blindness)
 Type: BLINDNESS
 ---
 Comments: ''
 Direction: ''
 Lex: blood pressure
-Regex: ''
+Regex: (blood pressure)
 Type: BLOOD_PRESSURE
 ---
 Comments: ''
@@ -43,55 +43,55 @@ Type: CHEST_PAIN
 Comments: ''
 Direction: ''
 Lex: clammy skin
-Regex: ''
+Regex: (clammy skin)
 Type: CLAMMY_SKIN
 ---
 Comments: ''
 Direction: ''
 Lex: combative
-Regex: ''
+Regex: (combative)
 Type: COMBATIVE
 ---
 Comments: ''
 Direction: ''
 Lex: confusion
-Regex: ''
+Regex: (confusion)
 Type: CONFUSION
 ---
 Comments: ''
 Direction: ''
 Lex: constipation
-Regex: ''
+Regex: (constipation)
 Type: CONSTIPATION
 ---
 Comments: ''
 Direction: ''
 Lex: cool skin
-Regex: ''
+Regex: (cool skin)
 Type: COOL_SKIN
 ---
 Comments: ''
 Direction: ''
 Lex: cough
-Regex: ''
+Regex: (cough)
 Type: COUGH
 ---
 Comments: ''
 Direction: ''
 Lex: decreased mental status
-Regex: ''
+Regex: (decreased mental status)
 Type: DECREASED_MENTAL_STATUS
 ---
 Comments: ''
 Direction: ''
 Lex: decreased visual acuity
-Regex: ''
+Regex: (decreased visual acuity)
 Type: DECREASED_VISUAL_ACUITY
 ---
 Comments: ''
 Direction: ''
 Lex: delusional thoughts
-Regex: ''
+Regex: (delusional thoughts)
 Type: DELUSIONAL_THOUGHTS
 ---
 Comments: ''
@@ -103,7 +103,7 @@ Type: MALAISE
 Comments: ''
 Direction: ''
 Lex: diaphoresis
-Regex: ''
+Regex: (diaphoresis)
 Type: DIAPHORESIS
 ---
 Comments: ''
@@ -127,7 +127,7 @@ Type: DIZZINESS
 Comments: ''
 Direction: ''
 Lex: dysrhythmia
-Regex: ''
+Regex: (dysrhythmia)
 Type: DYSRHYTHMIA
 ---
 Comments: ''
@@ -145,7 +145,7 @@ Type: FEVER
 Comments: ''
 Direction: ''
 Lex: hallucinations
-Regex: ''
+Regex: (hallucinations)
 Type: HALLUCINATIONS
 ---
 Comments: ''
@@ -163,25 +163,25 @@ Type: HOMICIDAL_THOUGHTS
 Comments: ''
 Direction: ''
 Lex: hypertension
-Regex: ''
+Regex: (hypertension)
 Type: HYPERTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: hyperthermia
-Regex: ''
+Regex: (hyperthermia)
 Type: HYPERTHERMIA
 ---
 Comments: ''
 Direction: ''
 Lex: hypotension
-Regex: ''
+Regex: (hypotension)
 Type: HYPOTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: hypothermia
-Regex: ''
+Regex: (hypothermia)
 Type: HYPOTHERMIA
 ---
 Comments: ''
@@ -205,13 +205,13 @@ Type: LOSS_OF_CONSCIOUSNESS
 Comments: ''
 Direction: ''
 Lex: mental status changes
-Regex: ''
+Regex: (mental status changes)
 Type: MENTAL_STATUS_CHANGES
 ---
 Comments: ''
 Direction: ''
 Lex: myalgias
-Regex: ''
+Regex: (myalgias)
 Type: MYALGIAS
 ---
 Comments: ''
@@ -223,7 +223,7 @@ Type: NAUSEA
 Comments: ''
 Direction: ''
 Lex: pain
-Regex: ''
+Regex: (pain)
 Type: PAIN
 ---
 Comments: Should "radiation" alone be a form of "pain radiation" as a concept?
@@ -241,7 +241,7 @@ Type: PAIN_REGION
 Comments: ''
 Direction: ''
 Lex: pain severity
-Regex: ''
+Regex: (pain severity)
 Type: PAIN_SEVERITY
 ---
 Comments: ''
@@ -253,25 +253,25 @@ Type: PALE
 Comments: ''
 Direction: ''
 Lex: palpitations
-Regex: ''
+Regex: (palpitations)
 Type: PALPITATIONS
 ---
 Comments: ''
 Direction: ''
 Lex: pregnancy
-Regex: ''
+Regex: (pregnancy|pregnant)
 Type: PREGNANCY
 ---
 Comments: ''
 Direction: ''
 Lex: pulse rate
-Regex: ''
+Regex: (pulse rate)
 Type: PULSE_RATE
 ---
 Comments: ''
 Direction: ''
 Lex: rales
-Regex: ''
+Regex: (rales)
 Type: RALES
 ---
 Comments: ''
@@ -289,19 +289,19 @@ Type: RESPIRATORY_RATE
 Comments: ''
 Direction: ''
 Lex: rhonchi
-Regex: ''
+Regex: (rhonchi)
 Type: RHONCHI
 ---
 Comments: ''
 Direction: ''
 Lex: rigidity
-Regex: ''
+Regex: (rigidity)
 Type: RIGIDITY
 ---
 Comments: ''
 Direction: ''
 Lex: seizure
-Regex: ''
+Regex: (seizure)
 Type: SEIZURE
 ---
 Comments: ''
@@ -313,7 +313,7 @@ Type: SHORTNESS_OF_BREATH
 Comments: ''
 Direction: ''
 Lex: sleepiness
-Regex: ''
+Regex: (sleepiness)
 Type: SLEEPINESS
 ---
 Comments: ''
@@ -325,7 +325,7 @@ Type: SUICIDAL_THOUGHT
 Comments: ''
 Direction: ''
 Lex: tachycardia
-Regex: ''
+Regex: (tachycardia)
 Type: TACHYCARDIA
 ---
 Comments: ''
@@ -343,37 +343,37 @@ Type: TRAUMA
 Comments: ''
 Direction: ''
 Lex: tripoding
-Regex: ''
+Regex: (tripoding)
 Type: TRIPODING
 ---
 Comments: ''
 Direction: ''
 Lex: unequal femoral pulses
-Regex: ''
+Regex: (unequal femoral pulses)
 Type: UNEQUAL_FEMORAL_PULSES
 ---
 Comments: ''
 Direction: ''
 Lex: use of accessory muscles
-Regex: ''
+Regex: (use of accessory muscles)
 Type: USE_OF_ACCESSORY_MUSCLES
 ---
 Comments: ''
 Direction: ''
 Lex: vaginal bleeding
-Regex: ''
+Regex: (vaginal bleeding)
 Type: VAGINAL_BLEEDING
 ---
 Comments: ''
 Direction: ''
 Lex: vaginal discharge
-Regex: ''
+Regex: (vaginal discharge)
 Type: VAGINAL_DISCHARGE
 ---
 Comments: ''
 Direction: ''
 Lex: violent
-Regex: ''
+Regex: (violent)
 Type: VIOLENT
 ---
 Comments: ''
@@ -391,5 +391,5 @@ Type: WEAKNESS
 Comments: ''
 Direction: ''
 Lex: wheezing
-Regex: ''
+Regex: (wheezing)
 Type: WHEEZING

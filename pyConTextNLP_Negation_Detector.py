@@ -78,6 +78,11 @@ def negations_pycontextnlp(clinical_text_df):
                     expected_negated_concepts.append(concept.split(',')[0])
         print(expected_negated_concepts)
 
+        # comment this out to include transcript that have no negated concepts
+        if len(expected_negated_concepts) == 0:
+            continue
+        ######################################################################
+
         true_positives = 0.
         false_positives = 0.
         for concept in set_detected_negated_concepts:
