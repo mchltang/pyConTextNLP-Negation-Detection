@@ -36,8 +36,21 @@ def update_concept_targets(ems_ontology_df):
     for index, row in ems_ontology_df.iterrows():
         row_ontology_concept = row[0]
         row_ontology_regex = row[1]
+
         if row_ontology_concept in dict_concepts_to_sets:
-            dict_concepts_to_sets[row_ontology_concept].add(row_ontology_regex)
+
+            is_substring = False
+            for concept, set_regex in dict_concepts_to_sets.items():
+                if is_substring:
+                    break
+                for regex in set_regex:
+                    if row_ontology_regex in regex or regex in row_ontology_regex:
+                        is_substring = True
+                        break
+
+            if not is_substring:
+                dict_concepts_to_sets[row_ontology_concept].add(row_ontology_regex)
+
         # # if concept in ontology does not exist in our dictionary, add it with a new set
         # else:
         #     dict_concepts_to_sets[row_ontology_concept] = set()

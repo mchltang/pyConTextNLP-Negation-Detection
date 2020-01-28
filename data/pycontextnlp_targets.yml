@@ -7,13 +7,16 @@ Type: ABSENT_FEMORAL_PULSES
 Comments: ''
 Direction: ''
 Lex: agitation
-Regex: (agitation)
+Regex: (upheaval|fidget|excitement|shaking|turmoil|dither|disturbance|upset|restlessness|worrying|swither|lather|ferment|tempestuousness|sweat|agitation|hullabaloo|stir|wag|tumult|perturbation|tailspin|shake|unrest|flap|fuss|stew|tizzy|fret)
 Type: AGITATION
 ---
 Comments: ''
 Direction: ''
 Lex: anxiety
-Regex: (anxiety)
+Regex: (insecurity|disconcertion|edginess|concern|hypochondria|fear|disconcertment|disquiet|misgiving|panic|psychological
+  state|scare|sinking|discomposure|anxiousness|mental condition|anxiety|emotion|scruple|jitteriness|mental
+  state|inquietude|jumpiness|nervousness|restiveness|discomfiture|trouble|psychological
+  condition|angst|uneasiness)
 Type: ANXIETY
 ---
 Comments: ''
@@ -25,7 +28,8 @@ Type: BIZARRE_BEHAVIOR
 Comments: ''
 Direction: ''
 Lex: blindness
-Regex: (blindness)
+Regex: (sightlessness|vision defect|visual impairment|anopia|eyelessness|blindness|cecity|visual
+  disorder|visual defect)
 Type: BLINDNESS
 ---
 Comments: ''
@@ -37,7 +41,7 @@ Type: BLOOD_PRESSURE
 Comments: ''
 Direction: ''
 Lex: chest pain
-Regex: (chest pain|cp|cx pain)
+Regex: (cx pain|chest pain|cp)
 Type: CHEST_PAIN
 ---
 Comments: ''
@@ -49,19 +53,19 @@ Type: CLAMMY_SKIN
 Comments: ''
 Direction: ''
 Lex: combative
-Regex: (combative)
+Regex: (bellicose|litigious|disputative|combative|agonistic|contentious|battleful|disputatious)
 Type: COMBATIVE
 ---
 Comments: ''
 Direction: ''
 Lex: confusion
-Regex: (confusion)
+Regex: (state of mind|cognitive state|embarrassment|fault|muddiness|confusion|error|mistake|discombobulation|combining|confusedness|combination|compounding|mix-up|disarray)
 Type: CONFUSION
 ---
 Comments: ''
 Direction: ''
 Lex: constipation
-Regex: (constipation)
+Regex: (dyschezia|irregularity|constipation|obstipation|fecal impaction)
 Type: CONSTIPATION
 ---
 Comments: ''
@@ -73,7 +77,7 @@ Type: COOL_SKIN
 Comments: ''
 Direction: ''
 Lex: cough
-Regex: (cough)
+Regex: (clear the throat|hack|whoop|symptom|spit up|cough|hawk|expectorate|spit out)
 Type: COUGH
 ---
 Comments: ''
@@ -97,25 +101,26 @@ Type: DELUSIONAL_THOUGHTS
 Comments: ''
 Direction: ''
 Lex: malaise
-Regex: (malaise|distress|discomfort)
+Regex: (uncomfortableness|malaise|unease|discomfort|distress)
 Type: MALAISE
 ---
 Comments: ''
 Direction: ''
 Lex: diaphoresis
-Regex: (diaphoresis)
+Regex: (sudation|hyperidrosis|perspiration|hyperhidrosis|diaphoresis|polyhidrosis)
 Type: DIAPHORESIS
 ---
 Comments: ''
 Direction: ''
 Lex: diarrhea
-Regex: (diarrhea|nvd|n/v/d)
+Regex: (diarrhoea|nvd|diarrhea|the trots|looseness of the bowels|n/v/d|the shits|montezuma's
+  revenge)
 Type: DIARRHEA
 ---
 Comments: ''
 Direction: ''
 Lex: distension
-Regex: (distension|distention|distended)
+Regex: (distension|varicocele|dilatation|distended|ectasis|tympanites|distention|ectasia)
 Type: DISTENSION
 ---
 Comments: ''
@@ -133,43 +138,44 @@ Type: DYSRHYTHMIA
 Comments: ''
 Direction: ''
 Lex: dysuria
-Regex: (dysuria|difficulty urinating)
+Regex: (difficulty urinating|dysuria)
 Type: DYSURIA
 ---
 Comments: ''
 Direction: ''
 Lex: fever
-Regex: (fever|fevers)
+Regex: (fevers|febrility|fever|febricity)
 Type: FEVER
 ---
 Comments: ''
 Direction: ''
 Lex: hallucinations
-Regex: (hallucinations)
+Regex: (visual hallucination|hallucinations|disorientation|auditory hallucination|acousma|misconception|freak
+  out|pseudohallucination|object|psychotic belief)
 Type: HALLUCINATIONS
 ---
 Comments: ''
 Direction: ''
 Lex: headache
-Regex: (headache|head ache|head pain)
+Regex: (megrim|head ache|cephalalgia|migraine|hemicrania|headache|vexation|head pain)
 Type: HEADACHE
 ---
 Comments: ''
 Direction: ''
 Lex: homicidal thoughts
-Regex: (homicidal thoughts|homicidal|homicide|homicidal ideations|murder)
+Regex: (murder|homicidal|homicidal thoughts|homicide|homicidal ideations)
 Type: HOMICIDAL_THOUGHTS
 ---
 Comments: ''
 Direction: ''
 Lex: hypertension
-Regex: (hypertension)
+Regex: (hyperpiesia|hyperpiesis|hypertension)
 Type: HYPERTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: hyperthermia
-Regex: (hyperthermia)
+Regex: (hyperpyrexia|hyperthermia|hyperthermy)
 Type: HYPERTHERMIA
 ---
 Comments: ''
@@ -187,19 +193,19 @@ Type: HYPOTHERMIA
 Comments: ''
 Direction: ''
 Lex: incontinence
-Regex: (incontinence|incontinent)
+Regex: (enuresis|incontinency|rakishness|incontinence|incontinent)
 Type: INCONTINENCE
 ---
 Comments: ''
 Direction: ''
 Lex: lightheadedness
-Regex: (lightheadedness|light headedness)
+Regex: (lightheadedness|light headedness|giddiness|vertigo)
 Type: LIGHTHEADEDNESS
 ---
 Comments: ''
 Direction: ''
 Lex: loss of consciousness
-Regex: (loss of consciousness|loc|syncope)
+Regex: (syncope|swoon|loc|loss of consciousness|deliquium)
 Type: LOSS_OF_CONSCIOUSNESS
 ---
 Comments: ''
@@ -211,25 +217,27 @@ Type: MENTAL_STATUS_CHANGES
 Comments: ''
 Direction: ''
 Lex: myalgias
-Regex: (myalgias)
+Regex: (hurting|myalgias)
 Type: MYALGIAS
 ---
 Comments: ''
 Direction: ''
 Lex: nausea
-Regex: (nausea|nvd|n/v/d)
+Regex: (queasiness|squeamishness|nausea|motion sickness|nvd|kinetosis|qualm|n/v/d|morning
+  sickness)
 Type: NAUSEA
 ---
 Comments: ''
 Direction: ''
 Lex: pain
-Regex: (pain)
+Regex: (mental anguish|break someone's heart|torture|stitch|keratalgia|odynophagia|twinge|glossodynia|excruciate|arthralgia|ulalgia|soreness|glossalgia|agonize|thermalgesia|haemorrhoid|thorn|rack|neuralgia|pain|aching|unpleasantness|irritant|dysmenorrhea|photalgia|smart|nuisance|erupt|mastalgia|melagra|causalgia|myodynia|podalgia|plague|gripes|griping|neuralgy|piles|photophobia|agonise|costalgia|try|rawness|hemorrhoid|suffering|recrudesce|nephralgia|colic|metralgia|pang|meralgia|pleurodynia|pleuralgia|orchidalgia|agony|excruciation|proctalgia|break
+  out|torment|mittelschmerz|chiralgia)
 Type: PAIN
 ---
 Comments: Should "radiation" alone be a form of "pain radiation" as a concept?
 Direction: ''
 Lex: pain radiation
-Regex: (pain radiation|radiation|radiating)
+Regex: (radiating|pain radiation|radiation)
 Type: PAIN_RADIATION
 ---
 Comments: ''
@@ -247,19 +255,20 @@ Type: PAIN_SEVERITY
 Comments: ''
 Direction: ''
 Lex: pale
-Regex: (pale|pallor)
+Regex: (discolour|pale|picket|blanch|blench|strip|discolor|pallid|pallor|wan)
 Type: PALE
 ---
 Comments: ''
 Direction: ''
 Lex: palpitations
-Regex: (palpitations)
+Regex: (shakiness|tremor|tremolo|vibration|trembling|quiver|palpitations)
 Type: PALPITATIONS
 ---
 Comments: ''
 Direction: ''
 Lex: pregnancy
-Regex: (pregnancy|pregnant)
+Regex: (metacyesis|placenta previa|eccyesis|parity|para|gravidity|pregnancy|gravidness|ectopic
+  gestation|pregnant|maternity|extrauterine gestation|gravida)
 Type: PREGNANCY
 ---
 Comments: ''
@@ -271,73 +280,75 @@ Type: PULSE_RATE
 Comments: ''
 Direction: ''
 Lex: rales
-Regex: (rales)
+Regex: (crepitation rale|rales|rattle|rattling)
 Type: RALES
 ---
 Comments: ''
 Direction: ''
 Lex: rash
-Regex: (rash|rashes)
+Regex: (urticaria|prickly heat|rashes|efflorescence|miliaria|urtication|roseola|hives|rash)
 Type: RASH
 ---
-Comments: What does "respiratory rate" as a concept mean? Does it mean "abnormally rapid breathing" aka "tachypnea/tachypneic"?
+Comments: What does "respiratory rate" as a concept mean? Does it mean "abnormally
+  rapid breathing" aka "tachypnea/tachypneic"?
 Direction: ''
 Lex: respiratory rate
-Regex: (respiratory rate|tachypnea|tachypneic)
+Regex: (respiratory rate|tachypneic|tachypnea)
 Type: RESPIRATORY_RATE
 ---
 Comments: ''
 Direction: ''
 Lex: rhonchi
-Regex: (rhonchi)
+Regex: (noise|rhonchus|rhonchi)
 Type: RHONCHI
 ---
 Comments: ''
 Direction: ''
 Lex: rigidity
-Regex: (rigidity)
+Regex: (rigidity|inflexibility|rigidness)
 Type: RIGIDITY
 ---
 Comments: ''
 Direction: ''
 Lex: seizure
-Regex: (seizure)
+Regex: (convulsion|raptus hemorrhagicus|ictus|seizure|gaining control|capture)
 Type: SEIZURE
 ---
 Comments: ''
 Direction: ''
 Lex: shortness of breath
-Regex: (shortness of breath|sob|dyspnea|difficulty breathing)
+Regex: (breathlessness|sob|dyspnoea|dyspnea|difficulty breathing|shortness of breath)
 Type: SHORTNESS_OF_BREATH
 ---
 Comments: ''
 Direction: ''
 Lex: sleepiness
-Regex: (sleepiness)
+Regex: (somnolence|sleepiness|drowsiness|oscitancy|oscitance)
 Type: SLEEPINESS
 ---
 Comments: ''
 Direction: ''
 Lex: suicidal thought
-Regex: (suicidal thought|suicidal|suicide|suicidal ideations)
+Regex: (suicidal|suicidal ideations|suicidal thought|suicide)
 Type: SUICIDAL_THOUGHT
 ---
 Comments: ''
 Direction: ''
 Lex: tachycardia
-Regex: (tachycardia)
+Regex: (tachycardia|cardiac arrhythmia)
 Type: TACHYCARDIA
 ---
 Comments: ''
 Direction: ''
 Lex: tenderness
-Regex: (tenderness|tender)
+Regex: (chafe|protectiveness|attachment|tenderness|respect|fond regard|tender|chafing)
 Type: TENDERNESS
 ---
 Comments: ''
 Direction: ''
 Lex: trauma
-Regex: (trauma|traumatic|traumatic injuries|injury|injuries)
+Regex: (rupture|brain damage|weal|pull|cryopathy|burn|harm|haemorrhage|insect bite|trauma|wrench|welt|bruise|injuries|wale|strain|whiplash|fracture|wound|hemorrhage|twist|electric
+  shock|injury|traumatic injuries|pinch|traumatic|lesion|bump|frostbite|sting|wheal|intravasation|contusion)
 Type: TRAUMA
 ---
 Comments: ''
@@ -373,23 +384,25 @@ Type: VAGINAL_DISCHARGE
 Comments: ''
 Direction: ''
 Lex: violent
-Regex: (violent)
+Regex: (violent|tearing|fierce|vehement|wild)
 Type: VIOLENT
 ---
 Comments: ''
 Direction: ''
 Lex: vomiting
-Regex: (vomiting|vomitting|vomit|nvd|n/v/d)
+Regex: (haematemesis|retch|barf|throw up|nvd|cast|honk|be sick|purge|regurgitation|disgorgement|vomit|hematemesis|hyperemesis|n/v/d|chuck|puke|vomiting|vomitting|rumination|regorge|spew|spue|puking|regurgitate)
 Type: VOMITING
 ---
 Comments: Is concept "weakness" related to term "facial droop"?
 Direction: ''
 Lex: weakness
-Regex: (weakness|facial droop)
+Regex: (feebleness|impuissance|faintness|flimsiness|vulnerability|smallness|fatigability|shoddiness|soft
+  spot|tenuity|attenuation|fatigue|weakness|weak part|lassitude|facial droop|lethargy|adynamia|enervation|littleness|delicacy|weak
+  spot|inadequacy|flaw|insubstantiality|slackness|inanition|helplessness|failing|fragility|insufficiency)
 Type: WEAKNESS
 ---
 Comments: ''
 Direction: ''
 Lex: wheezing
-Regex: (wheezing)
+Regex: (wheeze|asthmatic|wheezy|wheezing)
 Type: WHEEZING
