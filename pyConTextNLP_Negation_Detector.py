@@ -38,16 +38,20 @@ def negations_pycontextnlp(clinical_text_df):
             if 'opposite' in list_detected_negated_edges[idx][1].getCategory()[0]:
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_opposite'))
                 set_detected_negated_concepts.add(to_add)
-                print("negated concept '" + to_add + "' detected at position (" + str(
-                    list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + "), (" + str(
-                    list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ")")
+                print("negated concept '" + to_add + "' detected at position ("
+                      + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1])
+                      + ") (" + row[0][list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
+                      + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
+                      + row[0][list_positions[idx][1][0]:list_positions[idx][1][1]] + ")")
             # handle negative edge case
             elif 'neg' in list_detected_negated_edges[idx][0].getCategory()[0]:
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_'))
                 set_detected_negated_concepts.add(to_add)
-                print("negated concept '" + to_add + "' detected at position (" + str(
-                    list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + "), (" + str(
-                    list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ")")
+                print("negated concept '" + to_add + "' detected at position ("
+                      + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + ") ("
+                      + row[0][list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
+                      + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
+                      + row[0][list_positions[idx][1][0]:list_positions[idx][1][1]] + ")")
         print(set_detected_negated_concepts)
 
         print("Expected negated concepts:")
