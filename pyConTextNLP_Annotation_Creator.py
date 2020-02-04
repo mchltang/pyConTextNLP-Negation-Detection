@@ -36,9 +36,15 @@ def negations_pycontextnlp(clinical_text_df):
 
                 # print sentence being analyzed
                 print("..." + row[0][min(list_positions_together):max(list_positions_together)] + "...")
+                print("--------------------")
+                print("..." + row[0][(0 if min(list_positions_together) - 100 < 0 else min(list_positions_together) - 100) : min(list_positions_together)]
+                    + '|||||'
+                    + row[0][min(list_positions_together):max(list_positions_together)]
+                    + '|||||'
+                    + row[0][max(list_positions_together) : (len(row[0]) if max(list_positions_together) + 100 > len(row[0]) else max(list_positions_together) + 100)] + "...")
 
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_opposite'))
-                print("negated concept '" + to_add + "' detected at position ("
+                print("\nnegated concept '" + to_add + "' detected at position ("
                       + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1])
                       + ") (" + row[0][list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
                       + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
@@ -55,6 +61,7 @@ def negations_pycontextnlp(clinical_text_df):
                                         + ',' + row[0][min(list_positions_together):max(list_positions_together)] \
                                         + ')'
                     clinical_text_df.iat[index, 1] = str(row[1]) + '\n' + annotation_string
+                print('\n')
 
             # handle negative edge case
             elif 'neg' in list_detected_negated_edges[idx][0].getCategory()[0]:
@@ -66,9 +73,15 @@ def negations_pycontextnlp(clinical_text_df):
 
                 # print sentence being analyzed
                 print("..." + row[0][min(list_positions_together):max(list_positions_together)] + "...")
+                print("--------------------")
+                print("..." + row[0][(0 if min(list_positions_together) - 100 < 0 else min(list_positions_together) - 100) : min(list_positions_together)]
+                    + '|||||'
+                    + row[0][min(list_positions_together):max(list_positions_together)]
+                    + '|||||'
+                    + row[0][max(list_positions_together) : (len(row[0]) if max(list_positions_together) + 100 > len(row[0]) else max(list_positions_together) + 100)] + "...")
 
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_'))
-                print("negated concept '" + to_add + "' detected at position ("
+                print("\nnegated concept '" + to_add + "' detected at position ("
                       + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + ") ("
                       + row[0][list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
                       + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
@@ -85,6 +98,7 @@ def negations_pycontextnlp(clinical_text_df):
                                         + ',' + row[0][min(list_positions_together):max(list_positions_together)] \
                                         + ')'
                     clinical_text_df.iat[index, 1] = str(row[1]) + '\n' + annotation_string
+                print('\n')
 
     clinical_text_df.to_csv('data/exported_generated_annotations.csv')
 
