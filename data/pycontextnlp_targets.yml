@@ -1,274 +1,333 @@
 Comments: ''
 Direction: ''
 Lex: absent femoral pulses
-Regex: (absent femoral pulses)
+Regex: (femoral pulse absent|absent femoral pulses)
 Type: ABSENT_FEMORAL_PULSES
 ---
 Comments: ''
 Direction: ''
 Lex: agitation
-Regex: (upheaval|fidget|excitement|shaking|turmoil|dither|disturbance|upset|restlessness|worrying|swither|lather|ferment|tempestuousness|sweat|agitation|hullabaloo|stir|wag|tumult|perturbation|tailspin|shake|unrest|flap|fuss|stew|tizzy|fret)
+Regex: (hullabaloo|stir|upheaval|fuss|fret|hyperactive behavior|flap|perturbation|lather|tizzy|fidget|disturbance|motor
+  restlessness|tempestuousness|muscular unrest|emergence delirium|swither|tumult|agitation|ferment|excitement|shake|worrying|shaking|stew|restlessness  phenothiazine|physically
+  restless|wag|dither|tailspin|upset)
 Type: AGITATION
 ---
 Comments: ''
 Direction: ''
 Lex: anxiety
-Regex: (insecurity|disconcertion|edginess|concern|hypochondria|fear|disconcertment|disquiet|misgiving|panic|psychological
-  state|scare|sinking|discomposure|anxiousness|mental condition|anxiety|emotion|scruple|jitteriness|mental
-  state|inquietude|jumpiness|nervousness|restiveness|discomfiture|trouble|psychological
-  condition|angst|uneasiness)
+Regex: (disconcertion|nervousness|discomfiture|psychological state|angst|psychological
+  condition|discomposure|tx|hyperventilating|insecurity|sinking|jumpiness|disquiet|restiveness|inquietude|castration|panic
+  attacks|fear  mental process|misgiving|trouble|jitteriness|mental state|disconcertment|mental
+  condition|anxiety|edginess|anxious|uneasiness|emotion|scruple|hypochondria|concern|scared)
 Type: ANXIETY
 ---
 Comments: ''
 Direction: ''
 Lex: bizarre behavior
-Regex: (bizarre behavior)
+Regex: (behaving strangely|bizarre behavior|acting erratic|demonstrated behavior mannerisms
+  bizarre)
 Type: BIZARRE_BEHAVIOR
 ---
 Comments: ''
 Direction: ''
 Lex: blindness
-Regex: (sightlessness|vision defect|visual impairment|anopia|eyelessness|blindness|cecity|visual
-  disorder|visual defect)
+Regex: (eyelessness|blindness|norrie disease|onchocerciasis|sightlessness|ocular|sudden
+  visual loss|alexia|hysterical|amaurosis fugax|cecity|tobacco amblyopia|legal|recurrent
+  iridocyclitis|vision defect|anopia|visual defect|visual impairment|sequelae|transient|hemeralopia|visual
+  disorder|prosopagnosia)
 Type: BLINDNESS
 ---
 Comments: ''
 Direction: ''
 Lex: blood pressure
-Regex: (blood pressure)
+Regex: (blood pressure|htn|antihypertensive|bp)
 Type: BLOOD_PRESSURE
 ---
 Comments: ''
 Direction: ''
 Lex: chest pain
-Regex: (cx pain|chest pain|cp)
+Regex: (angina pectoris|chest pain|cp|cx pain|angina decubitus|unstable|nonpleuritic|xiphodynia)
 Type: CHEST_PAIN
 ---
 Comments: ''
 Direction: ''
 Lex: clammy skin
-Regex: (clammy skin)
+Regex: (and hypo  or hypervolemia|clammy skin|monitor for cardiovascular manifestations
+  of hyponatremia  e g)
 Type: CLAMMY_SKIN
 ---
 Comments: ''
 Direction: ''
 Lex: combative
-Regex: (bellicose|litigious|disputative|combative|agonistic|contentious|battleful|disputatious)
+Regex: (hits self|bellicose|dangerous maneuvers with wheelchair or other objects|combative|throws
+  objects|dementia|contentious|disputatious|litigious|agonistic|battleful|disputative|punches)
 Type: COMBATIVE
 ---
 Comments: ''
 Direction: ''
 Lex: confusion
-Regex: (state of mind|cognitive state|embarrassment|fault|muddiness|confusion|error|mistake|discombobulation|combining|confusedness|combination|compounding|mix-up|disarray)
+Regex: (mistake|combination|paroxysmal|muddiness|disarray|confused|discombobulation|mix-up|cognitive
+  state|combining|state of mind|error|confusion|reactive|clouded consciousness|fault|disoriented|compounding|embarrassment)
 Type: CONFUSION
 ---
 Comments: ''
 Direction: ''
 Lex: constipation
-Regex: (dyschezia|irregularity|constipation|obstipation|fecal impaction)
+Regex: (irregularity|constipation|fecal impaction|dyschezia)
 Type: CONSTIPATION
 ---
 Comments: ''
 Direction: ''
 Lex: cool skin
-Regex: (cool skin)
+Regex: (diphoretic|octinoxate 75 mg in 1 ml   oxybenzone 60 mg in 1 ml   octisalate
+  50 mg in 1 ml topical lotion  skin so soft bug guard plus ir3535 cool n fabulous
+  disappearing color insect repellent sunscreen|cool skin|cool and blue skin with
+  feet in dependent position|lidocaine 5 mg ml topical lotion|skin cool to touch|decreased
+  urinary output|and skin preparation solutions|warm or cool all irrigating|narrowed
+  pulse pressure|as appropriate|generalized coolness of skin|triclosan 4 6 mg ml medicated
+  liquid soap|barrier skin protectant topical application cream  soothe   cool inzo|absent
+  peripheral pulse|flush exposed skin with copious amounts of cool water|and utilize
+  appropriate neutralizing agent if indicated|lanolin 0 5 mg mg topical ointment|use
+  eyelid retractors if needed|soothe and cool free medseptic skin protectant)
 Type: COOL_SKIN
 ---
 Comments: ''
 Direction: ''
 Lex: cough
-Regex: (clear the throat|hack|whoop|symptom|spit up|cough|hawk|expectorate|spit out)
+Regex: (spit up|pertussis|cough|hack|hawk|expectorate|antitussive agents|explosive|spit
+  out|whoop|clear the throat|dbc)
 Type: COUGH
 ---
 Comments: ''
 Direction: ''
 Lex: decreased mental status
-Regex: (decreased mental status)
+Regex: (ams|alert|ayox4|acting appropriately|aox1|slow responsiveness|AMS|CAox4|found
+  altered|aox4|GCS|responsive to verbal|aox3|gcs|mental status altered responsiveness
+  decreased|acting out|post ictal|anox4|AY&Ox4|A&O x 1|slumped over|unresponsive|Aox2|AOX4|A&Ox2
+  basline|aox2|appears lethargic|ANOx4|A&Ox4|avpu|decreased mental status|semiconscious)
 Type: DECREASED_MENTAL_STATUS
 ---
 Comments: ''
 Direction: ''
 Lex: decreased visual acuity
-Regex: (decreased visual acuity)
+Regex: (adult onset|progressive|visual acuity decreased bilaterally|best corrected
+  distance visual acuity decreased|normal luminance best corrected visual acuity decreased|visual
+  acuity decreased os|decreased visual acuity|late onset|low luminance best corrected
+  visual acuity decreased|in some female carriers|decreased best corrected visual
+  acuity|visual acuity decreased od|decreased uncorrected visual acuity|visual acuity
+  decreased unilateral|reduced visual acuity)
 Type: DECREASED_VISUAL_ACUITY
 ---
 Comments: ''
 Direction: ''
 Lex: delusional thoughts
-Regex: (delusional thoughts)
+Regex: (delusions|delusional thoughts)
 Type: DELUSIONAL_THOUGHTS
 ---
 Comments: ''
 Direction: ''
 Lex: malaise
-Regex: (uncomfortableness|malaise|unease|discomfort|distress)
+Regex: (unease|discomfort|feeling weak|malay peninsula|fatigue adverse event|infantile
+  apparent life threatening event|distress|ill|feel crummy|malaise|near sudden infant
+  death syndrome|uncomfortableness|feeling sick|monitor energy level)
 Type: MALAISE
 ---
 Comments: ''
 Direction: ''
 Lex: diaphoresis
-Regex: (sudation|hyperidrosis|perspiration|hyperhidrosis|diaphoresis|polyhidrosis)
+Regex: (hyperidrosis|perform a comprehensive appraisal of peripheral circulation  e
+  g|monitor for insensible fluid loss|renal pathologies|cardiac failure|and temperature|monitor
+  for loss of electrolyte rich fluids  e g|pilomotor erection|paresthesia|diaphoresis|wound
+  drainage|associated hyperchloremia|diuretic therapy|muscle twitching|diaphoretic|polyuria|monitor
+  cardiorespiratory response to activity  e g|polyhidrosis|postoperative state|conjunctival
+  congestion|determine possible risk factors for fluid imbalance  e g|facial flushing|nasogastric
+  suction|or abnormally low systemic arterial pressure|heat exposure|tingling and
+  numbness|engorgement of temporal and neck vessels|hyperhidrosis|nasal congestion|ileostomy
+  drainage|ph level of  7 45|sudation|edema|cyanosis|tetany|hemodynamic pressures|monitor
+  work of breathing  e g|increased sweating|dry mouth|heart rate|strenuous exercise|monitor
+  for signs and symptoms of carbonic acid deficit and respiratory alkalosis  frequent
+  sighing and yawning|and possible hco3 deficit|paco2  35 mm hg|liver dysfunction|skin
+  is warm|perspiration|blurred vision|check peripheral pulses)
 Type: DIAPHORESIS
 ---
 Comments: ''
 Direction: ''
 Lex: diarrhea
-Regex: (diarrhoea|nvd|diarrhea|the trots|looseness of the bowels|n/v/d|the shits|montezuma's
-  revenge)
+Regex: (nvd|sprue|looseness of the bowels|tropical|diarrhea|dysentery|n/v/d|mucous
+  diarrhoea|balantidiasis|montezuma's revenge|the shits|watery diarrhoea|the trots)
 Type: DIARRHEA
 ---
 Comments: ''
 Direction: ''
 Lex: distension
-Regex: (distension|varicocele|dilatation|distended|ectasis|tympanites|distention|ectasia)
+Regex: (tympanites|pathological dilatation|distended|acute dilatation of stomach|distention|enlarged
+  uterus|dilatation of ureter|ectasis|varicocele|gaseous|ectasia|dilatation of intestine|enlargement
+  abdomen|distension)
 Type: DISTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: dizziness
-Regex: (dizziness|dizzyness)
+Regex: (vertigo|dizziness|how often dizzy|dizzyness|giddiness)
 Type: DIZZINESS
 ---
 Comments: ''
 Direction: ''
 Lex: dysrhythmia
-Regex: (dysrhythmia)
+Regex: (arrythmia|atrial arrhythmia|atrial ectopy|conduction disorder of the heart|dysrhythmia|cardiac
+  arrhythmia|arrhythmia prophylaxis|vtach)
 Type: DYSRHYTHMIA
 ---
 Comments: ''
 Direction: ''
 Lex: dysuria
-Regex: (difficulty urinating|dysuria)
+Regex: (difficulty passing urine|dysuria|difficulty urinating|consistency)
 Type: DYSURIA
 ---
 Comments: ''
 Direction: ''
 Lex: fever
-Regex: (fevers|febrility|fever|febricity)
+Regex: (anthrax disease|brucellosis|febrility|fever|equine infectious anemia|bovine
+  anaplasmosis|bartonella infections|afebrile|fevers|byssinosis|coccidioidomycosis|febricity|temperature
+  99.7F|malaria|bunyamwera virus disease)
 Type: FEVER
 ---
 Comments: ''
 Direction: ''
 Lex: hallucinations
-Regex: (visual hallucination|hallucinations|disorientation|auditory hallucination|acousma|misconception|freak
-  out|pseudohallucination|object|psychotic belief)
+Regex: (hypnapompic|sensory|gustatory|auditory|visual hallucination|psychotic belief|tactile|pseudohallucination|misconception|acousma|disorientation|kinesthetic|hypnagogic|olfactory|dissociative|hallucinations|freak
+  out|elementary|organic|mushroom hallucinosis|somatic)
 Type: HALLUCINATIONS
 ---
 Comments: ''
 Direction: ''
 Lex: headache
-Regex: (megrim|head ache|cephalalgia|migraine|hemicrania|headache|vexation|head pain)
+Regex: (cephalalgia|vexation|postauricular|headache|megrim|migraine disorders|common
+  migraine|hemicrania|head ache|head pain)
 Type: HEADACHE
 ---
 Comments: ''
 Direction: ''
 Lex: homicidal thoughts
-Regex: (murder|homicidal|homicidal thoughts|homicide|homicidal ideations)
+Regex: (homicidal thoughts|homicide|homicidal|murder|homicidal ideations)
 Type: HOMICIDAL_THOUGHTS
 ---
 Comments: ''
 Direction: ''
 Lex: hypertension
-Regex: (hyperpiesia|hyperpiesis|hypertension)
+Regex: (renovascular|endolymphatic hydrops|hypertensive disease|hyperpiesia|portal|hypertension|BP
+  very elevated|hypertensive heart disease|hyperpiesis)
 Type: HYPERTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: hyperthermia
-Regex: (hyperpyrexia|hyperthermia|hyperthermy)
+Regex: (ultrasound therapy systems|microspheres|hyperthermia|embolization|hyperthermy|malignant
+  hyperpyrexia due to anesthesia|therapeutic heat application)
 Type: HYPERTHERMIA
 ---
 Comments: ''
 Direction: ''
 Lex: hypotension
-Regex: (hypotension)
+Regex: (hypotension|decreased diastolic arterial pressure|low intracranial pressure|controlled|orthostatic|decreased
+  systolic arterial pressure)
 Type: HYPOTENSION
 ---
 Comments: ''
 Direction: ''
 Lex: hypothermia
-Regex: (hypothermia)
+Regex: (cooling units|patient|natural|accidental|hypothermia|caps)
 Type: HYPOTHERMIA
 ---
 Comments: ''
 Direction: ''
 Lex: incontinence
-Regex: (enuresis|incontinency|rakishness|incontinence|incontinent)
+Regex: (rakishness|neuromuscular|clamps|unaware of passing urine|nocturnal bladder
+  warning system|enuresis|incontinency|incontinence|stimulators|electrical|external
+  occlusion|incontinent)
 Type: INCONTINENCE
 ---
 Comments: ''
 Direction: ''
 Lex: lightheadedness
-Regex: (lightheadedness|light headedness|giddiness|vertigo)
+Regex: (rapid pulse|presence of such symptoms as breathlessness|or loss of balance|lightheadedness|light
+  headedness|monitor exercise tolerance  e g)
 Type: LIGHTHEADEDNESS
 ---
 Comments: ''
 Direction: ''
 Lex: loss of consciousness
-Regex: (syncope|swoon|loc|loss of consciousness|deliquium)
+Regex: (vaso vagle|fainting|passed out|loc|syncope|fainted|loa|swoon|deliquium|unconscious|loss
+  of consciousness|LOC)
 Type: LOSS_OF_CONSCIOUSNESS
 ---
 Comments: ''
 Direction: ''
 Lex: mental status changes
-Regex: (mental status changes)
+Regex: (and changes in mental status|mental status changes|monitor for apprehension)
 Type: MENTAL_STATUS_CHANGES
 ---
 Comments: ''
 Direction: ''
 Lex: myalgias
-Regex: (hurting|myalgias)
+Regex: (sudden onset of generalized muscle aches|episodic|pleurodynia|viral myalgia|myalgias|hurting|epidemic)
 Type: MYALGIAS
 ---
 Comments: ''
 Direction: ''
 Lex: nausea
-Regex: (queasiness|squeamishness|nausea|motion sickness|nvd|kinetosis|qualm|n/v/d|morning
-  sickness)
+Regex: (nvd|nauseous|qualm|squeamishness|motion sickness|n/v/d|morning sickness|queasiness|emetrol|nausea|kinetosis)
 Type: NAUSEA
 ---
 Comments: ''
 Direction: ''
 Lex: pain
-Regex: (mental anguish|break someone's heart|torture|stitch|keratalgia|odynophagia|twinge|glossodynia|excruciate|arthralgia|ulalgia|soreness|glossalgia|agonize|thermalgesia|haemorrhoid|thorn|rack|neuralgia|pain|aching|unpleasantness|irritant|dysmenorrhea|photalgia|smart|nuisance|erupt|mastalgia|melagra|causalgia|myodynia|podalgia|plague|gripes|griping|neuralgy|piles|photophobia|agonise|costalgia|try|rawness|hemorrhoid|suffering|recrudesce|nephralgia|colic|metralgia|pang|meralgia|pleurodynia|pleuralgia|orchidalgia|agony|excruciation|proctalgia|break
-  out|torment|mittelschmerz|chiralgia)
+Regex: (thermalgesia|haemorrhoid|smart|dysmenorrhea|thorn|myodynia|ulalgia|neuralgia|irritant|colic|excruciate|neuralgy|twinge|keratalgia|nuisance|pang|arthralgia|excruciation|back
+  hurts|plague|break out|glossalgia|gripes|odynophagia|glossodynia|orchidalgia|suffering|photalgia|costalgia|hemorrhoid|photophobia|mental
+  anguish|podalgia|stitch|mastalgia|metralgia|pleuralgia|proctalgia|pain|torment|burning|meralgia|agonize|agony|chiralgia|piles|rawness|agonise|recrudesce|break
+  someone's heart|griping|mittelschmerz|unpleasantness|causalgia|melagra|nephralgia)
 Type: PAIN
 ---
 Comments: Should "radiation" alone be a form of "pain radiation" as a concept?
 Direction: ''
 Lex: pain radiation
-Regex: (radiating|pain radiation|radiation)
+Regex: (intensity|radiating|and precipitating and alleviating factors|pain radiation|radiation|duration)
 Type: PAIN_RADIATION
 ---
 Comments: ''
 Direction: ''
 Lex: pain region
-Regex: (pain region|lower back pain)
+Regex: (forehead|upper abdomen|pelvic region and thigh|pain region|lower back pain)
 Type: PAIN_REGION
 ---
 Comments: ''
 Direction: ''
 Lex: pain severity
-Regex: (pain severity)
+Regex: (rated at|pain severity|right jaw|aching)
 Type: PAIN_SEVERITY
 ---
 Comments: ''
 Direction: ''
 Lex: pale
-Regex: (discolour|pale|picket|blanch|blench|strip|discolor|pallid|pallor|wan)
+Regex: '(discolour|lycodes pallidus|skinw arm pink|blench|kalmia polifolia|skin baseline
+  color|picket|blanch|anemic infarct|skin normal|echinacea pallida preparation|ptereleotris
+  heteroptera|skin: warm|wan|apogon planifrons|skin cool dry|pallor|strip|nm/wm/dry|discolor|warm
+  dry skin|turdus pallidus|pale)'
 Type: PALE
 ---
 Comments: ''
 Direction: ''
 Lex: palpitations
-Regex: (shakiness|tremor|tremolo|vibration|trembling|quiver|palpitations)
+Regex: (tremolo|vibration|palpitations|bumping heart|pounding heart|trembling|irregular
+  heart beat|shakiness|tremor|quiver)
 Type: PALPITATIONS
 ---
 Comments: ''
 Direction: ''
 Lex: pregnancy
-Regex: (metacyesis|placenta previa|eccyesis|parity|para|gravidity|pregnancy|gravidness|ectopic
-  gestation|pregnant|maternity|extrauterine gestation|gravida)
+Regex: (eccyesis|gravida|heterotopic|gravidness|prolonged|hydatidiform mole|maternity|gravidity|ld|placenta
+  previa|premature rupture|miscarriages|ectopic gestation|spontaneous abortion|extrauterine
+  gestation|pregnancy|obs|parity|metacyesis|pregnant|fetal membranes)
 Type: PREGNANCY
 ---
 Comments: ''
@@ -280,75 +339,89 @@ Type: PULSE_RATE
 Comments: ''
 Direction: ''
 Lex: rales
-Regex: (crepitation rale|rales|rattle|rattling)
+Regex: (basilar|bubbling crackles|expiratory crackles|rattle|crepitation rale|subcrepitant|fine
+  respiratory crackles|rattling|coarse respiratory crackles|post tussive crackles|inspiratory
+  crackles|rales)
 Type: RALES
 ---
 Comments: ''
 Direction: ''
 Lex: rash
-Regex: (urticaria|prickly heat|rashes|efflorescence|miliaria|urtication|roseola|hives|rash)
+Regex: (phototoxic|serum sickness|exanthema|viral exanthem|dermatitis|acneiform eruptions|cutaneous
+  candidiasis|urticaria|petechiae|urtication|prurigo|roseola|prickly heat|miliaria|drug
+  eruptions|eczema|rashes|hives|rash|efflorescence)
 Type: RASH
 ---
 Comments: What does "respiratory rate" as a concept mean? Does it mean "abnormally
   rapid breathing" aka "tachypnea/tachypneic"?
 Direction: ''
 Lex: respiratory rate
-Regex: (respiratory rate|tachypneic|tachypnea)
+Regex: (tachypnea|tachypneic|respiratory rate|breathing rate|Cx rise|irregular respirations|agonal
+  breathing)
 Type: RESPIRATORY_RATE
 ---
 Comments: ''
 Direction: ''
 Lex: rhonchi
-Regex: (noise|rhonchus|rhonchi)
+Regex: (rhonchus|CBBS|rhonchi|dry rale)
 Type: RHONCHI
 ---
 Comments: ''
 Direction: ''
 Lex: rigidity
-Regex: (rigidity|inflexibility|rigidness)
+Regex: (analyzer|inflexibility|rigidness|decerebrate state|gegenhalten|neck stiffness|rigidity)
 Type: RIGIDITY
 ---
 Comments: ''
 Direction: ''
 Lex: seizure
-Regex: (convulsion|raptus hemorrhagicus|ictus|seizure|gaining control|capture)
+Regex: (seizure|absence epilepsy|gaining control|myoclonic epilepsy|ictus|convulsion|raptus
+  hemorrhagicus|fit frequency|postictal|cursive  running|sz|intractable jacksonian
+  epilepsy|reflex epilepsy|gelastic epilepsy|capture)
 Type: SEIZURE
 ---
 Comments: ''
 Direction: ''
 Lex: shortness of breath
-Regex: (breathlessness|sob|dyspnoea|dyspnea|difficulty breathing|shortness of breath)
+Regex: (adequate rate|respirations are unlabored|dyspnoea|increasing breathlessness|dyspnea|shortness
+  of breath|non labored|difficulty breathing|of shortness breath|sob)
 Type: SHORTNESS_OF_BREATH
 ---
 Comments: ''
 Direction: ''
 Lex: sleepiness
-Regex: (somnolence|sleepiness|drowsiness|oscitancy|oscitance)
+Regex: (narcolepsy|multiple sleep latency test|oscitancy|sleepy|somnolence|cataplexy
+  and onset of sleep in desynchronized phase|sleep apnea symptoms assessed|cdisc questionnaire
+  ess test code terminology|cdisc questionnaire ess test name terminology|hypersomnia|sleepiness|oscitance|drowsiness)
 Type: SLEEPINESS
 ---
 Comments: ''
 Direction: ''
 Lex: suicidal thought
-Regex: (suicidal|suicidal ideations|suicidal thought|suicide)
+Regex: (suicidal ideations|suicide|suicidal|suicidal thought)
 Type: SUICIDAL_THOUGHT
 ---
 Comments: ''
 Direction: ''
 Lex: tachycardia
-Regex: (tachycardia|cardiac arrhythmia)
+Regex: (ventricular|reciprocating|tachycardic|ectopic junctional|exertional|tachycardia|sinus
+  tach)
 Type: TACHYCARDIA
 ---
 Comments: ''
 Direction: ''
 Lex: tenderness
-Regex: (chafe|protectiveness|attachment|tenderness|respect|fond regard|tender|chafing)
+Regex: (tender|chafing|tenderness|chafe|protectiveness|sore|attachment|fond regard|respect)
 Type: TENDERNESS
 ---
 Comments: ''
 Direction: ''
 Lex: trauma
-Regex: (rupture|brain damage|weal|pull|cryopathy|burn|harm|haemorrhage|insect bite|trauma|wrench|welt|bruise|injuries|wale|strain|whiplash|fracture|wound|hemorrhage|twist|electric
-  shock|injury|traumatic injuries|pinch|traumatic|lesion|bump|frostbite|sting|wheal|intravasation|contusion)
+Regex: (haemorrhage|dysbarism|sting|contusion|noise induced hearing loss|mva|combat
+  disorders|pinch|airbag deployment|trauma|electric shock|pull|fracture|welt|m of
+  i|fall|bruising|MVA|cryopathy|injury|burns|major bleeding|whiplash|weal|dcapbtls|moi|strain|mvc|gsw|wrench|intravasation|twist|DCAPBTLS|traumatic|assault|crepitus
+  and deformity|frostbite|harm|injuries|brain damage|bruise|wale|wheal|lesion|laceration|insect
+  bite|nursing specialty|traumatic injuries)
 Type: TRAUMA
 ---
 Comments: ''
@@ -366,43 +439,52 @@ Type: UNEQUAL_FEMORAL_PULSES
 Comments: ''
 Direction: ''
 Lex: use of accessory muscles
-Regex: (use of accessory muscles)
+Regex: (and supraclavicular and intercostal muscle retractions|monitor for indications
+  of chronic respiratory acidosis  e g|clubbing of nails|watching for symmetry|pursed
+  lips breathing|accessory muscle usage|note chest movement|barrel chest|use of accessory
+  muscles|accessory muscles used with breathing|including symmetry|use of significant
+  respiratory accessory muscles|accessory respiratory muscles used|minimal use of
+  respiratory accessory muscles)
 Type: USE_OF_ACCESSORY_MUSCLES
 ---
 Comments: ''
 Direction: ''
 Lex: vaginal bleeding
-Regex: (vaginal bleeding)
+Regex: (vaginal vault bleeding|vaginal hemorrhage|vaginal introitus bleeding|no vaginal
+  blood loss|vaginal bleeding|normal menstrual blood loss)
 Type: VAGINAL_BLEEDING
 ---
 Comments: ''
 Direction: ''
 Lex: vaginal discharge
-Regex: (vaginal discharge)
+Regex: (vaginal discharge|cheesy|meconium stained|leukorrhea)
 Type: VAGINAL_DISCHARGE
 ---
 Comments: ''
 Direction: ''
 Lex: violent
-Regex: (violent|tearing|fierce|vehement|wild)
+Regex: (violent|physical aggression|fierce|temper tantrum|aggressive|torture|tearing|vehement)
 Type: VIOLENT
 ---
 Comments: ''
 Direction: ''
 Lex: vomiting
-Regex: (haematemesis|retch|barf|throw up|nvd|cast|honk|be sick|purge|regurgitation|disgorgement|vomit|hematemesis|hyperemesis|n/v/d|chuck|puke|vomiting|vomitting|rumination|regorge|spew|spue|puking|regurgitate)
+Regex: (vomit|haematemesis|vomitting|throw up|retch|rumination|purge|nvd|barf|N/V/D|be
+  sick|chuck|puking|honk|enteritis due to specified virus|disgorgement|regurgitation|puke|regurgitate|anticipatory|regorge|spew|hyperemesis|hematemesis|NVD|spue|n/v/d|vomiting)
 Type: VOMITING
 ---
 Comments: Is concept "weakness" related to term "facial droop"?
 Direction: ''
 Lex: weakness
-Regex: (feebleness|impuissance|faintness|flimsiness|vulnerability|smallness|fatigability|shoddiness|soft
-  spot|tenuity|attenuation|fatigue|weakness|weak part|lassitude|facial droop|lethargy|adynamia|enervation|littleness|delicacy|weak
-  spot|inadequacy|flaw|insubstantiality|slackness|inanition|helplessness|failing|fragility|insufficiency)
+Regex: (weak arterial pulse|faintness|vulnerability|facial droop|feels weak|inadequacy|helplessness|attenuation|fragility|littleness|flaw|slackness|paresis|weak
+  part|weakness|shoddiness|lethargy|soft spot|feebleness|flimsiness|heart failure|insubstantiality|tenuity|delicacy|lassitude|weak
+  spot|fatigability|impuissance|insufficiency|voice fatigue|failing|enervation|inanition|smallness|cardiovascular
+  deterioration|adynamia)
 Type: WEAKNESS
 ---
 Comments: ''
 Direction: ''
 Lex: wheezing
-Regex: (wheeze|asthmatic|wheezy|wheezing)
+Regex: (lung sounds clear|wheeze|asthmatic breathing|wheezy|clear bilaterally|respiratory
+  sounds|breath sounds|wheezing|clear to ausc|factitious asthma)
 Type: WHEEZING
