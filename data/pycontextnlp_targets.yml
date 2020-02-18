@@ -236,7 +236,7 @@ Type: HYPOTENSION
 Comments: ''
 Direction: ''
 Lex: hypothermia
-Regex: (cooling units|patient|natural|accidental|hypothermia|caps)
+Regex: (hypothermia)
 Type: HYPOTHERMIA
 ---
 Comments: ''
