@@ -1,17 +1,10 @@
 import pyConTextNLP.pyConText as pyConText
 import pyConTextNLP.itemData as itemData
-import networkx as nx
 import pandas as pd
-import spacy
-import urllib
 import os
 
 
 def negations_pycontextnlp(clinical_text_df):
-    # using scispacy only because we need its sentencizer
-    scispacy_model = spacy.load('en_core_sci_lg')
-    scispacy_model.add_pipe(scispacy_model.create_pipe('sentencizer'), before="parser")
-
     total_neg_concepts_detected = 0
     total_expected_negated_concepts = 0
 
@@ -27,9 +20,12 @@ def negations_pycontextnlp(clinical_text_df):
 
         print("Transcript " + str(index) + ", row " + str(index + 2) + ":")
 
+        # modify the transcript by replacing all whitespace with individual spaces
+        transcript_to_process = ' '.join(transcript_to_sentences_of_tokens(row[0], False))
+        clinical_text_df.iat[index, 0] = transcript_to_process
+
         # print("Detected negated edges:")
-        list_detected_negated_edges, list_positions = negations_pycontextnlp_individual_transcript(scispacy_model,
-                                                                                                   row[0])
+        list_detected_negated_edges, list_positions = negations_pycontextnlp_individual_transcript(transcript_to_process)
 
         print("Detected negated concepts:\n")
         set_detected_negated_concepts = set()
@@ -44,15 +40,15 @@ def negations_pycontextnlp(clinical_text_df):
                         list_positions_together.append(list_positions[idx][i][j])
 
                 # print sentence being analyzed
-                print("..." + row[0][min(list_positions_together):max(list_positions_together)] + "...")
+                print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
 
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_opposite'))
                 set_detected_negated_concepts.add(to_add)
                 print("negated concept '" + to_add + "' detected at position ("
                       + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1])
-                      + ") (" + row[0][list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
+                      + ") (" + transcript_to_process[list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
                       + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
-                      + row[0][list_positions[idx][1][0]:list_positions[idx][1][1]] + ")\n")
+                      + transcript_to_process[list_positions[idx][1][0]:list_positions[idx][1][1]] + ")\n")
 
             # handle negative edge case
             elif 'neg' in list_detected_negated_edges[idx][0].getCategory()[0]:
@@ -63,15 +59,15 @@ def negations_pycontextnlp(clinical_text_df):
                         list_positions_together.append(list_positions[idx][i][j])
 
                 # print sentence being analyzed
-                print("..." + row[0][min(list_positions_together):max(list_positions_together)] + "...")
+                print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
 
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_'))
                 set_detected_negated_concepts.add(to_add)
                 print("negated concept '" + to_add + "' detected at position ("
                       + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + ") ("
-                      + row[0][list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
+                      + transcript_to_process[list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
                       + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
-                      + row[0][list_positions[idx][1][0]:list_positions[idx][1][1]] + ")\n")
+                      + transcript_to_process[list_positions[idx][1][0]:list_positions[idx][1][1]] + ")\n")
 
         print(set_detected_negated_concepts)
 
@@ -126,7 +122,7 @@ def negations_pycontextnlp(clinical_text_df):
             transcript_precision = true_positives / (true_positives + false_positives)
             transcript_recall = true_positives / (true_positives + false_negatives)
             transcript_f1 = 2 * (
-                        (transcript_precision * transcript_recall) / (transcript_precision + transcript_recall))
+                    (transcript_precision * transcript_recall) / (transcript_precision + transcript_recall))
 
         print("\nPrecision for this transcript: " + str(transcript_precision))
         print("Recall for this transcript: " + str(transcript_recall))
@@ -149,15 +145,14 @@ def negations_pycontextnlp(clinical_text_df):
     print('Average F1: ' + str(f1_sum / total_transcripts_passed))
 
 
-def negations_pycontextnlp_individual_transcript(nlp, clinical_text):
+def negations_pycontextnlp_individual_transcript(clinical_text):
     PYCONTEXTNLP_MODIFIERS = r'/' + os.getcwd() + '/data/pycontextnlp_modifiers.yml'
     PYCONTEXTNLP_TARGETS = r'/' + os.getcwd() + '/data/pycontextnlp_targets.yml'
 
     modifiers = itemData.get_items(PYCONTEXTNLP_MODIFIERS)
     targets = itemData.get_items(PYCONTEXTNLP_TARGETS)
 
-    sentences = nlp(clinical_text)
-    sentences = [sent.string for sent in sentences.sents]
+    sentences = transcript_to_sentences_of_tokens(clinical_text, False)
 
     list_negated_edges = []
     list_positions = []
@@ -172,7 +167,8 @@ def negations_pycontextnlp_individual_transcript(nlp, clinical_text):
                     (curr_combined_length + edge[1].getSpan()[0], curr_combined_length + edge[1].getSpan()[1])
                 )
             )
-        curr_combined_length += len(sentence)
+        # add 1 to account for stripped space
+        curr_combined_length += len(sentence) + 1
         list_negated_edges.extend(returned_negated_edges)
 
     return (list_negated_edges, list_positions)
@@ -206,6 +202,56 @@ def pycontextnlp_markup_sentence(s, modifiers, targets, prune_inactive=True):
         list_negated_edges.append(edge)
 
     return list_negated_edges
+
+
+def transcript_to_sentences_of_tokens(transcript_to_process, return_tokens=True):
+    # first split the transcript by whitespace into a list
+    list_tokens = transcript_to_process.split()
+
+    # if a tokens last character is ':' or '-', add a special character ^ to the end of the token before it
+    # indicating end of sentence.
+    for i in range(len(list_tokens)):
+        if (list_tokens[i][-1] == ':' or list_tokens[i][-1] == '-') \
+                and (i != 0) \
+                and (list_tokens[i - 1][-1] != '.') \
+                and (list_tokens[i - 1][-1] != '!') \
+                and (list_tokens[i - 1][-1] != '?'):
+            list_tokens[i - 1] = list_tokens[i - 1] + '^'
+
+    # a list of concatenations that do not signify end of sentence.
+    list_concatenations = ['pt.', 'st.', 'dr.']
+
+    # divide the tokens into their own individual lists by looking for punctuation characters
+    # default punctuation characters are '.', '!', '?',
+    list_sentences = []
+
+    sentence = []
+    while len(list_tokens) != 0:
+        if (list_tokens[0][-1] == '.'
+            or list_tokens[0][-1] == '!'
+            or list_tokens[0][-1] == '?'
+            or list_tokens[0][-1] == '^') \
+                and list_tokens[0].lower() not in list_concatenations:
+
+            # special character check, remove if it's there
+            if list_tokens[0][-1] == '^':
+                list_tokens[0] = list_tokens[0][:-1]
+
+            sentence.append(list_tokens.pop(0))
+            list_sentences.append(sentence)
+            sentence = []
+        else:
+            sentence.append(list_tokens.pop(0))
+
+    # if return_tokens == True, then return the sentences as lists of tokens
+    # otherwise, return as individual strings
+    if return_tokens:
+        return list_sentences
+    else:
+        list_sentences_joined = []
+        for sentence in list_sentences:
+            list_sentences_joined.append(' '.join(sentence))
+        return list_sentences_joined
 
 
 def main():
