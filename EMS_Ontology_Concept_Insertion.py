@@ -68,7 +68,10 @@ def update_concept_targets(ems_ontology_df):
         if(len(dict_concepts_to_sets[concept]) != 0):
             str_regex_statement = '('
             for regex_to_concat in dict_concepts_to_sets[concept]:
-                str_regex_statement += regex_to_concat + '|'
+
+                # str_regex_statement += '\s+' + regex_to_concat + '\.?\!?\??' + '\,?\:?\-?' + '\s+' + '|'
+                str_regex_statement += '(\s|\/)' + regex_to_concat + '(\s|\/|\.|\!|\?|\,|\:|\-)' + '|'
+
             str_regex_statement = str_regex_statement[:-1]
             str_regex_statement += ')'
         dict_to_add = {}

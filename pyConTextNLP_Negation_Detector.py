@@ -25,7 +25,8 @@ def negations_pycontextnlp(clinical_text_df):
         clinical_text_df.iat[index, 0] = transcript_to_process
 
         # print("Detected negated edges:")
-        list_detected_negated_edges, list_positions = negations_pycontextnlp_individual_transcript(transcript_to_process)
+        list_detected_negated_edges, list_positions = negations_pycontextnlp_individual_transcript(
+            transcript_to_process)
 
         print("Detected negated concepts:\n")
         set_detected_negated_concepts = set()
@@ -62,12 +63,16 @@ def negations_pycontextnlp(clinical_text_df):
                 print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
 
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_'))
-                set_detected_negated_concepts.add(to_add)
-                print("negated concept '" + to_add + "' detected at position ("
-                      + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + ") ("
-                      + transcript_to_process[list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
-                      + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
-                      + transcript_to_process[list_positions[idx][1][0]:list_positions[idx][1][1]] + ")\n")
+
+                # ignore detections longer than a certain number of characters in length
+                if max(list_positions_together) - min(list_positions_together) < 105:
+                    set_detected_negated_concepts.add(to_add)
+
+                    print("negated concept '" + to_add + "' detected at position ("
+                          + str(list_positions[idx][0][0]) + ", " + str(list_positions[idx][0][1]) + ") ("
+                          + transcript_to_process[list_positions[idx][0][0]:list_positions[idx][0][1]] + "), ("
+                          + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
+                          + transcript_to_process[list_positions[idx][1][0]:list_positions[idx][1][1]] + ")\n")
 
         print(set_detected_negated_concepts)
 
@@ -77,7 +82,7 @@ def negations_pycontextnlp(clinical_text_df):
         else:
             expected_concepts = "".join(row[1].split())
             expected_concepts = expected_concepts[1:-1].split(')(')
-            expected_negated_concepts = []
+            expected_negated_concepts = set()
             for concept in expected_concepts:
                 if ('false' in concept or 'False' in concept):
                     # TEMPORARY: ignore corner cases of related concepts
@@ -92,10 +97,11 @@ def negations_pycontextnlp(clinical_text_df):
                     #     and 'fever' not in concept
                     # ):
 
-                    expected_negated_concepts.append(concept.split(',')[0])
+                    expected_negated_concepts.add(concept.split(',')[0])
         print(expected_negated_concepts)
 
         # comment this out to include transcript that have no negated concepts
+        ######################################################################
         if len(expected_negated_concepts) == 0:
             print('\n\n')
             continue
