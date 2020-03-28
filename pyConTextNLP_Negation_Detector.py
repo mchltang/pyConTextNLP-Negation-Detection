@@ -76,6 +76,98 @@ def negations_pycontextnlp(clinical_text_df):
                           + str(list_positions[idx][1][0]) + ", " + str(list_positions[idx][1][1]) + ") ("
                           + transcript_to_process[list_positions[idx][1][0]:list_positions[idx][1][1]] + ")\n")
 
+        # handle non case
+        list_tokens = transcript_to_process.split()
+        for i in range(len(list_tokens)):
+            token = list_tokens[i]
+            if token[0:3] == 'non':
+                if len(token) == 3:
+                    # non tender
+                    potential_negated_concept = list_tokens[i+1]
+                    not_string_to_test = "not " + potential_negated_concept + "."
+                    list_non_edges = negations_pycontextnlp_individual_transcript(not_string_to_test)[0]
+                    for idx in range(len(list_non_edges)):
+                        if 'neg' in list_non_edges[idx][0].getCategory()[0]:
+
+                            # get position of both "non" and the concept being negated
+                            list_positions_together = []
+                            non_sum = 0
+                            for j in range(i):
+                                non_sum += len(list_tokens[j]) + 1
+                            list_positions_together.append(non_sum)
+                            list_positions_together.append(non_sum + len(list_tokens[i]))
+                            list_positions_together.append(non_sum + len(list_tokens[i]) + 1)
+                            list_positions_together.append(non_sum + len(list_tokens[i]) + 1 + len(list_tokens[i+1]))
+
+                            print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
+
+                            to_add = "".join(list_non_edges[idx][1].getCategory()[0].split('_'))
+                            # set_detected_negated_concepts.add(to_add)
+
+                            print("negated concept '" + to_add + "' detected at position ("
+                                + str(list_positions_together[0]) + ", " + str(list_positions_together[1]) + ") ("
+                                + transcript_to_process[list_positions_together[0]:list_positions_together[1]] + "), ("
+                                + str(list_positions_together[2]) + ", " + str(list_positions_together[3]) + ") ("
+                                + transcript_to_process[list_positions_together[2]:list_positions_together[3]] + ")\n")
+
+                elif token[3] == '-':
+                    # non-tender
+                    potential_negated_concept = token[4:]
+                    not_string_to_test = "not " + potential_negated_concept + "."
+                    list_non_edges = negations_pycontextnlp_individual_transcript(not_string_to_test)[0]
+                    for idx in range(len(list_non_edges)):
+                        if 'neg' in list_non_edges[idx][0].getCategory()[0]:
+
+                            # get position of both "non" and the concept being negated
+                            list_positions_together = []
+                            non_sum = 0
+                            for j in range(i):
+                                non_sum += len(list_tokens[j]) + 1
+                            list_positions_together.append(non_sum)
+                            list_positions_together.append(non_sum + 3)
+                            list_positions_together.append(non_sum + 4)
+                            list_positions_together.append(non_sum + 4 + len(potential_negated_concept))
+
+                            print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
+
+                            to_add = "".join(list_non_edges[idx][1].getCategory()[0].split('_'))
+                            # set_detected_negated_concepts.add(to_add)
+
+                            print("negated concept '" + to_add + "' detected at position ("
+                                + str(list_positions_together[0]) + ", " + str(list_positions_together[1]) + ") ("
+                                + transcript_to_process[list_positions_together[0]:list_positions_together[1]] + "), ("
+                                + str(list_positions_together[2]) + ", " + str(list_positions_together[3]) + ") ("
+                                + transcript_to_process[list_positions_together[2]:list_positions_together[3]] + ")\n")
+
+                else:
+                    # nontender
+                    potential_negated_concept = token[3:]
+                    not_string_to_test = "not " + potential_negated_concept + "."
+                    list_non_edges = negations_pycontextnlp_individual_transcript(not_string_to_test)[0]
+                    for idx in range(len(list_non_edges)):
+                        if 'neg' in list_non_edges[idx][0].getCategory()[0]:
+
+                            # get position of both "non" and the concept being negated
+                            list_positions_together = []
+                            non_sum = 0
+                            for j in range(i):
+                                non_sum += len(list_tokens[j]) + 1
+                            list_positions_together.append(non_sum)
+                            list_positions_together.append(non_sum + 3)
+                            list_positions_together.append(non_sum + 3)
+                            list_positions_together.append(non_sum + 3 + len(potential_negated_concept))
+
+                            print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
+
+                            to_add = "".join(list_non_edges[idx][1].getCategory()[0].split('_'))
+                            # set_detected_negated_concepts.add(to_add)
+
+                            print("negated concept '" + to_add + "' detected at position ("
+                                + str(list_positions_together[0]) + ", " + str(list_positions_together[1]) + ") ("
+                                + transcript_to_process[list_positions_together[0]:list_positions_together[1]] + "), ("
+                                + str(list_positions_together[2]) + ", " + str(list_positions_together[3]) + ") ("
+                                + transcript_to_process[list_positions_together[2]:list_positions_together[3]] + ")\n")
+
         print(set_detected_negated_concepts)
 
         print("Expected negated concepts:")
