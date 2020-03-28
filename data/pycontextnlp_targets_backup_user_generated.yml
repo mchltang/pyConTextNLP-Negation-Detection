@@ -37,7 +37,7 @@ Type: BLOOD_PRESSURE
 Comments: ''
 Direction: ''
 Lex: chest pain
-Regex: (chest pain|cp|cx pain)
+Regex: (chest pain|cp|cx pain|c/p)
 Type: CHEST_PAIN
 ---
 Comments: ''
@@ -109,7 +109,7 @@ Type: DIAPHORESIS
 Comments: ''
 Direction: ''
 Lex: diarrhea
-Regex: (diarrhea|nvd|n/v/d)
+Regex: (diarrhea|d)
 Type: DIARRHEA
 ---
 Comments: ''
@@ -217,7 +217,7 @@ Type: MYALGIAS
 Comments: ''
 Direction: ''
 Lex: nausea
-Regex: (nausea|nvd|n/v/d)
+Regex: (nausea|n)
 Type: NAUSEA
 ---
 Comments: ''
@@ -379,7 +379,7 @@ Type: VIOLENT
 Comments: ''
 Direction: ''
 Lex: vomiting
-Regex: (vomiting|vomitting|vomit|nvd|n/v/d)
+Regex: (vomiting|vomitting|vomit|v)
 Type: VOMITING
 ---
 Comments: Is concept "weakness" related to term "facial droop"?
