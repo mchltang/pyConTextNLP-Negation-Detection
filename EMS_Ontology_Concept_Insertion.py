@@ -51,6 +51,9 @@ def update_concept_targets(ems_ontology_df):
             if not is_substring:
                 dict_concepts_to_sets[row_ontology_concept].add(row_ontology_regex)
 
+            # # used for testing
+            # dict_concepts_to_sets[row_ontology_concept].add(row_ontology_regex)
+
         # # if concept in ontology does not exist in our dictionary, add it with a new set
         # else:
         #     dict_concepts_to_sets[row_ontology_concept] = set()

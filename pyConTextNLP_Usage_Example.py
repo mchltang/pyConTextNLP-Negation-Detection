@@ -6,7 +6,7 @@ import os
 PYCONTEXTNLP_MODIFIERS = r'/' + os.getcwd() + '/data/pycontextnlp_modifiers.yml'
 PYCONTEXTNLP_TARGETS = r'/' + os.getcwd() + '/data/pycontextnlp_targets.yml'
 
-test_str = "Pt denied chest pain and dizziness."
+test_str = "Patient denied n/v/d."
 
 modifiers = itemData.get_items(PYCONTEXTNLP_MODIFIERS)
 targets = itemData.get_items(PYCONTEXTNLP_TARGETS)

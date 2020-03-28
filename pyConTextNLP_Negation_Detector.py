@@ -41,7 +41,8 @@ def negations_pycontextnlp(clinical_text_df):
                         list_positions_together.append(list_positions[idx][i][j])
 
                 # print sentence being analyzed
-                print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
+                if max(list_positions_together) - min(list_positions_together) < 105:
+                    print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
 
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_opposite'))
                 set_detected_negated_concepts.add(to_add)
@@ -60,7 +61,8 @@ def negations_pycontextnlp(clinical_text_df):
                         list_positions_together.append(list_positions[idx][i][j])
 
                 # print sentence being analyzed
-                print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
+                if max(list_positions_together) - min(list_positions_together) < 105:
+                    print("..." + transcript_to_process[min(list_positions_together):max(list_positions_together)] + "...")
 
                 to_add = "".join(list_detected_negated_edges[idx][1].getCategory()[0].split('_'))
 
@@ -97,7 +99,8 @@ def negations_pycontextnlp(clinical_text_df):
                     #     and 'fever' not in concept
                     # ):
 
-                    expected_negated_concepts.add(concept.split(',')[0])
+                    # replace underscores with empty string because i'm dumb
+                    expected_negated_concepts.add(concept.split(',')[0].replace('_', ''))
         print(expected_negated_concepts)
 
         # comment this out to include transcript that have no negated concepts
