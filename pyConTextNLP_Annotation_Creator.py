@@ -2,7 +2,6 @@ import pyConTextNLP.pyConText as pyConText
 import pyConTextNLP.itemData as itemData
 import networkx as nx
 import pandas as pd
-import spacy
 import urllib
 import os
 
